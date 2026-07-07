@@ -58,6 +58,7 @@ export const lookItems = catalog.map((p, i) => ({
   name: p.name,
   color: p.colors[0],
   price: p.price,
+  originalPrice: p.originalPrice,
   slug: p.slug,
   image: p.image,
 }));

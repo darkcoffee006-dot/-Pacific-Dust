@@ -68,7 +68,16 @@ export default function ProductCard({ product }: ProductCardProps) {
         </Link>
         <p className="text-xs text-ink-muted mt-0.5">{product.colors.join(" · ")}</p>
         <div className="flex items-center justify-between mt-2">
-          <p className="text-sm">₹{product.price.toLocaleString("en-IN")}</p>
+          <div className="flex items-center gap-2">
+            {product.originalPrice ? (
+              <>
+                <span className="text-sm font-medium text-accent">₹{product.price.toLocaleString("en-IN")}</span>
+                <span className="text-xs text-ink-muted line-through">₹{product.originalPrice.toLocaleString("en-IN")}</span>
+              </>
+            ) : (
+              <span className="text-sm">₹{product.price.toLocaleString("en-IN")}</span>
+            )}
+          </div>
           {/* Desktop: subtle text link; Mobile: prominent tap button */}
           <button
             onClick={() => open(product)}

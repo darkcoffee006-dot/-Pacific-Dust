@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   category: string;
   price: number;
+  originalPrice?: number;
   currency: string;
   slug: string;
   image?: string;
@@ -34,6 +35,9 @@ export interface LookItem {
   name: string;
   color: string;
   price: number;
+  originalPrice?: number;
+  slug?: string;
+  image?: string;
 }
 
 export interface Testimonial {

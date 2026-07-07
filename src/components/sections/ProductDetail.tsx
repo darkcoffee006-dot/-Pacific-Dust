@@ -115,7 +115,14 @@ export default function ProductDetail({ product }: { product: Product }) {
           <h1 className="font-display text-4xl md:text-6xl mt-4 leading-[0.95]">{product.name}</h1>
 
           <div className="mt-6 flex items-baseline gap-3">
-            <p className="text-lg">₹{product.price.toLocaleString("en-IN")}</p>
+            {product.originalPrice ? (
+              <>
+                <span className="text-lg font-medium text-accent">₹{product.price.toLocaleString("en-IN")}</span>
+                <span className="text-sm text-ink-muted line-through">₹{product.originalPrice.toLocaleString("en-IN")}</span>
+              </>
+            ) : (
+              <p className="text-lg">₹{product.price.toLocaleString("en-IN")}</p>
+            )}
             <p className="text-xs text-ink-muted">incl. all taxes · free delivery</p>
           </div>
 

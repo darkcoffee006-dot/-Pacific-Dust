@@ -79,8 +79,8 @@ export default function Hero() {
       >
         {/* Full-bleed image */}
         <img
-          src="/images/pacific/black/city of angels/DSCN5425.JPG.jpg.jpeg"
-          alt=""
+          src="/images/pacific/black/city of angels/city_of_angels_hanger.jpg"
+          alt="City of Angels Tee on Hanger"
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: "center 25%" }}

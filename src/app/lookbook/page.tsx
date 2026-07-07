@@ -229,7 +229,16 @@ export default function Lookbook() {
                 />
               </div>
               <p className="mt-4 font-display text-lg">{p.name}</p>
-              <p className="text-xs text-ink-muted mt-1">₹{p.price.toLocaleString("en-IN")}</p>
+              <div className="text-xs text-ink-muted mt-1 flex items-center gap-1.5">
+                {p.originalPrice ? (
+                  <>
+                    <span className="font-medium text-accent">₹{p.price.toLocaleString("en-IN")}</span>
+                    <span className="line-through">₹{p.originalPrice.toLocaleString("en-IN")}</span>
+                  </>
+                ) : (
+                  <span>₹{p.price.toLocaleString("en-IN")}</span>
+                )}
+              </div>
             </Link>
           ))}
         </div>

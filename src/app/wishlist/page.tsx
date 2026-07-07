@@ -35,7 +35,16 @@ export default function Wishlist() {
                   <p className="eyebrow">{p.category}</p>
                   <Link href={`/products/${p.slug}`}><h3 className="font-display text-3xl mt-3">{p.name}</h3></Link>
                   <p className="text-xs text-ink-muted mt-2">{p.colors.join(" · ")}</p>
-                  <p className="text-sm mt-4">₹{p.price.toLocaleString("en-IN")}</p>
+                  <div className="text-sm mt-4 flex items-center gap-2">
+                    {p.originalPrice ? (
+                      <>
+                        <span className="font-medium text-accent">₹{p.price.toLocaleString("en-IN")}</span>
+                        <span className="text-xs text-ink-muted line-through">₹{p.originalPrice.toLocaleString("en-IN")}</span>
+                      </>
+                    ) : (
+                      <span>₹{p.price.toLocaleString("en-IN")}</span>
+                    )}
+                  </div>
                 </div>
                 <div className="flex gap-3 mt-6">
                   <Link href={`/products/${p.slug}`} className="btn-ink !py-3 !px-5">Add to bag</Link>

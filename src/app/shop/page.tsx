@@ -82,7 +82,16 @@ export default function Shop() {
                       <p className="eyebrow">{p.category}</p>
                       <p className="font-display text-lg md:text-2xl mt-1 truncate">{p.name}</p>
                       <p className="text-xs text-ink-muted mt-1 truncate">{p.colors.join(" · ")}</p>
-                      <div className="text-sm mt-2">₹{p.price.toLocaleString("en-IN")}</div>
+                      <div className="text-sm mt-2 flex items-center gap-2">
+                        {p.originalPrice ? (
+                          <>
+                            <span className="font-medium text-accent">₹{p.price.toLocaleString("en-IN")}</span>
+                            <span className="text-xs text-ink-muted line-through">₹{p.originalPrice.toLocaleString("en-IN")}</span>
+                          </>
+                        ) : (
+                          <span>₹{p.price.toLocaleString("en-IN")}</span>
+                        )}
+                      </div>
                     </div>
                     <span className="text-[11px] tracking-[0.18em] uppercase link-underline flex-shrink-0">View →</span>
                   </Link>

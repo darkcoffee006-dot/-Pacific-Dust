@@ -121,7 +121,14 @@ export default function QuickAddModal({ product, onClose }: Props) {
                   <p className="eyebrow truncate">{product.category}</p>
                   <h2 className="font-display text-[1.25rem] mt-0.5 leading-tight truncate">{product.name}</h2>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-base font-light">₹{product.price.toLocaleString("en-IN")}</span>
+                    {product.originalPrice ? (
+                      <>
+                        <span className="text-base font-medium text-accent">₹{product.price.toLocaleString("en-IN")}</span>
+                        <span className="text-sm text-ink-muted line-through">₹{product.originalPrice.toLocaleString("en-IN")}</span>
+                      </>
+                    ) : (
+                      <span className="text-base font-light">₹{product.price.toLocaleString("en-IN")}</span>
+                    )}
                     <span className="text-[10px] text-ink-muted">incl. taxes</span>
                   </div>
                 </div>
@@ -239,7 +246,14 @@ export default function QuickAddModal({ product, onClose }: Props) {
                     {product.name}
                   </h2>
                   <div className="mt-4 flex items-baseline gap-3">
-                    <span className="text-xl font-light">₹{product.price.toLocaleString("en-IN")}</span>
+                    {product.originalPrice ? (
+                      <>
+                        <span className="text-xl font-medium text-accent">₹{product.price.toLocaleString("en-IN")}</span>
+                        <span className="text-base text-ink-muted line-through">₹{product.originalPrice.toLocaleString("en-IN")}</span>
+                      </>
+                    ) : (
+                      <span className="text-xl font-light">₹{product.price.toLocaleString("en-IN")}</span>
+                    )}
                     <span className="text-xs text-ink-muted">incl. taxes · free delivery</span>
                   </div>
                 </div>

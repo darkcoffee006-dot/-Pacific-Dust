@@ -69,8 +69,15 @@ export default function ShopTheLook() {
                         <p className="text-[11px] text-stone-400 mt-0.5">{item.color}</p>
                       </div>
                     </div>
-                    <span className="text-[13px] text-stone-900">
-                      ₹{item.price.toLocaleString("en-IN")}
+                    <span className="text-[13px] text-stone-900 flex items-center gap-1.5">
+                      {item.originalPrice ? (
+                        <>
+                          <span className="font-medium text-accent">₹{item.price.toLocaleString("en-IN")}</span>
+                          <span className="text-xs text-stone-400 line-through">₹{item.originalPrice.toLocaleString("en-IN")}</span>
+                        </>
+                      ) : (
+                        <span>₹{item.price.toLocaleString("en-IN")}</span>
+                      )}
                     </span>
                   </Link>
                 </li>
