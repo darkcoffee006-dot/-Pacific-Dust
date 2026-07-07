@@ -10,79 +10,74 @@ export default function HouseStory() {
           {/* ── Text ──────────────────────────────────────────────── */}
           <div>
             <p className="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-6">
-              The House · Since 2019
+              The House · Est. 2024
             </p>
             <h2 className="text-[clamp(2rem,3.5vw,3rem)] font-light leading-snug text-stone-900 mb-8">
-              We do not chase seasons.
+              We don&apos;t chase trends.
             </h2>
             <p className="text-[14px] leading-relaxed text-stone-500 mb-5">
-              We build a wardrobe as one builds a room — with air, with weight,
-              with time.
+              We build pieces as one builds a reputation — slowly, deliberately,
+              without compromise.
             </p>
             <p className="text-[14px] leading-relaxed text-stone-500 mb-5">
-              Cut in ateliers across Northern Italy and Portugal, from mills that
-              have supplied Europe's most exacting houses for six generations.
+              Every tee starts from 240 GSM premium French Terry cotton, sourced
+              for its weight, breathability, and structure. Then it&apos;s cut
+              oversized, finished with a ribbed crew collar, and printed with
+              either high-definition screen print or premium DTF artwork.
             </p>
             <p className="text-[14px] leading-relaxed text-stone-500 mb-10">
-              We work with virgin wool, undyed cashmere, Egyptian cotton and
-              Japanese denim — always natural, always traceable. Fewer garments,
-              made more slowly. Each piece is designed to sit inside your wardrobe
-              for a decade, not a season.
+              Made in Delhi NCR. Worn everywhere. Built to outlast the hype.
             </p>
             <Link
               href="/about"
               className="text-[11px] tracking-widest uppercase text-stone-900 underline underline-offset-4 hover:text-stone-500 transition-colors"
             >
-              Read our philosophy
+              Our story
             </Link>
           </div>
 
           {/* ── Right column ──────────────────────────────────────── */}
           <div className="flex flex-col gap-10">
-            {/* Studio image */}
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/pacific/white/dreams/DSCN5454.JPG.jpg.jpeg"
-                alt="Light through the atelier — natural materials"
+                alt="Pacific Dust studio — Delhi NCR"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover object-center"
               />
             </div>
 
-            {/* Atelier callout */}
             <div className="border-l-2 border-stone-900 pl-8">
               <p className="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-3">
-                Made Slowly
+                Made With Intent
               </p>
               <p className="text-[clamp(1.8rem,3vw,2.8rem)] font-light leading-none text-stone-900 mb-4">
-                Fifty pairs
+                One tee.
                 <br />
-                <em className="italic text-stone-400">of hands.</em>
-                <br />
-                One garment.
+                <em className="italic text-stone-400">No shortcuts.</em>
               </p>
               <p className="text-[13px] leading-relaxed text-stone-500 mb-6">
-                Every Monolith Overcoat passes through fifty hands over three
-                weeks — from loom to lining to the final press.
+                Every Pacific Dust tee goes through multiple rounds of sampling
+                and quality checks before it reaches you — because we only release
+                what meets our own standard.
               </p>
               <Link
                 href="/about"
                 className="text-[11px] tracking-widest uppercase text-stone-900 underline underline-offset-4 hover:text-stone-500 transition-colors"
               >
-                Inside the atelier
+                Read more
               </Link>
             </div>
 
-            {/* Material tags */}
             <div className="grid grid-cols-2 gap-3 pt-6 border-t border-stone-100">
               {[
-                "Virgin Wool",
-                "Undyed Cashmere",
-                "Egyptian Cotton",
-                "Japanese Denim",
-                "Portuguese Loopback",
-                "Traceable Origin",
+                "240 GSM French Terry",
+                "Premium Screen Print",
+                "DTF Artwork",
+                "Oversized Box Fit",
+                "Made in Delhi NCR",
+                "Pan-India Delivery",
               ].map((mat) => (
                 <div key={mat} className="flex items-center gap-2.5">
                   <span className="w-1 h-1 rounded-full bg-stone-400 shrink-0" />

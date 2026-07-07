@@ -2,12 +2,12 @@ import type { NavItem, Testimonial, Chapter } from "@/types";
 import { catalog } from "@/data/products";
 
 export const announcementItems = [
-  "Complimentary delivery across Delhi NCR & Faridabad",
-  "New Arrivals — Autumn / Winter 26",
-  "Proudly made in India — Crafted with precision",
-  "Now delivering Pan India",
+  "Now delivering Pan India — Order from anywhere",
+  "Drop 01 — Autumn / Winter 26 · Live now",
+  "Proudly made in India — 240 GSM French Terry",
+  "Free delivery on orders above ₹2,000 across Delhi NCR",
   "Free returns within 15 days — No questions asked",
-  "Book a private styling session — Delhi NCR only",
+  "Order via WhatsApp · +91 96436 44455",
 ];
 
 // Nav matches the screenshot exactly: Shop | Collections | Lookbook | Journal | About
@@ -22,34 +22,34 @@ export const navItems: NavItem[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "The most beautifully cut coat I've ever owned. It feels like architecture.",
+      "The City of Angels tee is genuinely the best quality tee I've worn. Heavy, structured, perfect oversized fit.",
   },
   {
     quote:
-      "Pacific Dust has replaced everything in my wardrobe. Quiet, dense, exact.",
+      "Pacific Dust replaced every basic in my wardrobe. The fabric weight alone justifies the price.",
   },
   {
     quote:
-      "A house that understands restraint. I bought once, I still wear it three winters on.",
+      "Ordered the Unbothered tee. The DTF print is insane — crisp, detailed, still perfect after ten washes.",
   },
 ];
 
 export const chapters: Chapter[] = [
   {
-    season: "Autumn / Winter",
-    description: "Twelve pieces. Stone, charcoal, bone.",
+    season: "Autumn / Winter 26",
+    description: "Drop 01 — four tees. Black and white.",
   },
   {
-    season: "Spring / Summer",
-    description: "Linen, cotton, open weave.",
+    season: "Spring / Summer 27",
+    description: "Coming soon.",
   },
   {
     season: "Transitional",
-    description: "Between seasons. Layered and considered.",
+    description: "Between drops. The archive.",
   },
   {
     season: "Archive",
-    description: "Past chapters, still available.",
+    description: "Past drops, while stocks last.",
   },
 ];
 
@@ -68,18 +68,18 @@ export const footerLinks = {
     { label: "Shop All", href: "/shop" },
     { label: "T-Shirts", href: "/category/t-shirts" },
     { label: "Lookbook", href: "/lookbook" },
-    { label: "Search", href: "/search" },
+    { label: "Collections", href: "/collections" },
   ],
   "The House": [
-    { label: "Our Philosophy", href: "/philosophy" },
-    { label: "The Atelier", href: "/atelier" },
-    { label: "Materials", href: "/materials" },
+    { label: "About Us", href: "/about" },
     { label: "Journal", href: "/journal" },
+    { label: "Contact", href: "/contact" },
+    { label: "FAQ", href: "/faq" },
   ],
   Service: [
-    { label: "Shipping", href: "/shipping" },
-    { label: "Returns", href: "/returns" },
-    { label: "Care Guide", href: "/care" },
-    { label: "Contact", href: "/contact" },
+    { label: "Shipping & Delivery", href: "/faq#orders" },
+    { label: "Returns", href: "/faq#returns" },
+    { label: "Size Guide", href: "/faq#sizing" },
+    { label: "WhatsApp Us", href: "https://wa.me/919643644455" },
   ],
 };

@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Pacific Dust — Quiet Luxury, Architecturally Cut",
-  description: "Fewer garments, made more slowly. Crafted in India for Delhi NCR & Faridabad.",
+  description: "Fewer garments, made more slowly. Crafted in Delhi NCR, India.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

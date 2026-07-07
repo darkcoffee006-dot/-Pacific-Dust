@@ -36,13 +36,13 @@ export default function Checkout() {
           <section className="mt-16"><h2 className="eyebrow">Shipping address</h2>
             <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-6">
               <Field label="First name"/><Field label="Last name"/>
-              <Field label="Address" span/><Field label="City" placeholder="Delhi / Faridabad / Noida"/>
+              <Field label="Address" span/><Field label="City" placeholder="Delhi / Noida / Mumbai"/>
               <Field label="Postal code"/><Field label="State" placeholder="Delhi / Haryana"/>
             </div>
           </section>
           <section className="mt-16"><h2 className="eyebrow">Delivery method</h2>
             <div className="mt-6 divide-y divide-line border-y border-line">
-              {[["Standard","3–5 working days","Free (orders above ₹2000)"],["Express","1–2 working days","₹99"],["Same-day (Faridabad/Delhi)","Before 7pm","₹149"]].map(([m,d,p],i) => (
+              {[["Standard","3–5 working days","Free (orders above ₹2000)"],["Express","1–2 working days","₹99"],["Same-day (Delhi NCR)","Before 7pm","₹149"]].map(([m,d,p],i) => (
                 <label key={m} className="flex items-center justify-between py-5 cursor-pointer">
                   <span className="flex items-center gap-4">
                     <span className={`size-4 rounded-full border ${i===0?"border-ink bg-ink ring-4 ring-background ring-offset-1 ring-offset-ink":"border-line"}`}/>

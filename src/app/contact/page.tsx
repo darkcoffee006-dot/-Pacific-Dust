@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"/>
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-background grid gap-4">
             {[
-              { city:"Faridabad", addr:"Old Faridabad — Studio (by appointment)" },
+              { city:"Delhi NCR", addr:"Studio — by appointment" },
               { city:"Delhi",     addr:"Visiting by appointment only" },
             ].map(l => (
               <div key={l.city} className="bg-background/15 backdrop-blur-xl px-5 py-4 rounded-sm flex items-center gap-4">

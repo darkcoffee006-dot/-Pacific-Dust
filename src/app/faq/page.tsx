@@ -9,14 +9,14 @@ const groups = [
   ]},
   { title:"Returns & Alterations", id:"returns", items:[
     ["Can I return a piece?","Yes — within 15 days, unworn, with tags. We collect from your door."],
-    ["Do you offer alterations?","Available at our Faridabad studio by appointment."],
+    ["Do you offer alterations?","Available at our Delhi NCR studio by appointment."],
   ]},
   { title:"Sizing & Fit", id:"sizing", items:[
     ["How do your pieces fit?","Cut relaxed and oversized. Size down if you prefer a slimmer silhouette."],
     ["Do you have a size guide?","On every product page with measurements."],
   ]},
   { title:"The House", id:"house", items:[
-    ["Where is Pacific Dust made?","In our studio in Faridabad, India."],
+    ["Where is Pacific Dust made?","In our studio in Delhi NCR, India."],
     ["Do you sell in stores?","No. Only through this website and via WhatsApp."],
     ["Why don't you do sales?","Because we don't overproduce. We make what we can sell at a fair, full price."],
   ]},

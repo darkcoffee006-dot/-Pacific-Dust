@@ -74,7 +74,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     ],
     [
       "Delivery & returns",
-      "Free delivery across Delhi NCR and Faridabad. 3–5 working days.\n15-day returns on unworn pieces.",
+      "Pan-India delivery — 3–5 working days. Free on orders above ₹2,000.\n15-day returns on unworn pieces. We collect from your door.",
     ],
   ];
 
@@ -224,7 +224,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           </a>
 
           <div className="mt-6 flex flex-wrap gap-6 text-xs text-ink-muted">
-            <span className="flex items-center gap-2"><Truck size={14} /> Free Delhi NCR delivery</span>
+          <span className="flex items-center gap-2"><Truck size={14} /> Free delivery above ₹2,000</span>
             <span className="flex items-center gap-2"><RotateCcw size={14} /> 15-day returns</span>
           </div>
 

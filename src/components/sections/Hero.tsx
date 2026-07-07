@@ -171,8 +171,8 @@ export default function Hero() {
               <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Dust.</em>
             </h1>
             <p className="mt-3 text-[12px] leading-relaxed font-light max-w-[230px]" style={{ color: "#5a5040" }}>
-              320 gsm French Terry cotton.<br />
-              Oversized box fit. Made in Faridabad.
+              240 GSM premium French Terry.<br />
+              Oversized box fit. Made in Delhi NCR.
             </p>
           </motion.div>
 
@@ -297,8 +297,8 @@ export default function Hero() {
           initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }}
           transition={{ duration:1.0, ease:EASE, delay:1.0 }}>
           <p className="text-[12.5px] text-stone-600 leading-[1.7] font-light">
-            Cut in Portugal from<br />320 gsm brushed cotton.<br /><br />
-            Every silhouette engineered to<br />fall away from the body.
+            Made in Delhi NCR from<br />240 GSM premium French Terry.<br /><br />
+            Oversized box fit engineered<br />to fall away from the body.
           </p>
         </motion.div>
 

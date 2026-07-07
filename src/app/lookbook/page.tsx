@@ -28,7 +28,7 @@ export default function Lookbook() {
               <em className="italic font-light">— a lookbook.</em>
             </h1>
             <p className="mt-8 text-sm text-ink-muted max-w-sm leading-relaxed">
-              Four tees. Four stories. Photographed across Faridabad and Delhi — collection
+              Four tees. Four stories. Photographed across Delhi NCR — collection
               sessions, studio days, and the quiet in between.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -250,7 +250,7 @@ export default function Lookbook() {
         <div className="text-sm text-ink-muted space-y-3 leading-relaxed">
           <p>Creative direction · Studio Pacific Dust</p>
           <p>Photography · Team Pacific Dust</p>
-          <p>Location · Faridabad &amp; Delhi, September 2026</p>
+          <p>Location · Delhi NCR, September 2026</p>
           <p>{allLookbookShots.length} editorial frames · {lookbookChapters.length + 1} chapters</p>
         </div>
       </section>

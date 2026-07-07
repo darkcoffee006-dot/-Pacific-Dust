@@ -23,7 +23,7 @@ export default function Shop() {
             <p className="eyebrow">All Pieces — {filtered.length}</p>
             <h1 className="font-display text-6xl md:text-9xl mt-6 leading-[0.9]">The <em className="italic font-light">shop</em>.</h1>
           </div>
-          <p className="md:col-span-4 text-ink-muted text-sm leading-relaxed">A living archive of every piece we currently make. Ordered by quiet, weight, and season.</p>
+          <p className="md:col-span-4 text-ink-muted text-sm leading-relaxed">Four tees. 240 GSM French Terry. Oversized box fit. Made in Delhi NCR. This is Drop 01.</p>
         </div>
       </header>
 

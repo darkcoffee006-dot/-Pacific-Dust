@@ -39,14 +39,14 @@ export default function Footer() {
 
           {/* Brand + newsletter — spans 5 cols */}
           <div className="col-span-2 md:col-span-5">
-            <p className="eyebrow text-background/50">Est. Faridabad 2024</p>
+            <p className="eyebrow text-background/50">Est. Delhi NCR 2024</p>
             <h2 className="font-display text-5xl md:text-7xl mt-6 leading-[0.9]">
               Pacific<br />Dust.
             </h2>
             <p className="mt-8 max-w-md text-sm leading-relaxed text-background/70">
-              A quiet house of clothing — made in Faridabad, India. Cut from
-              natural fibres, considered like architecture, worn like a memory.
-              Delivering across Delhi NCR.
+              A quiet house of clothing — made in Delhi NCR, India. 240 GSM
+              premium French Terry. Considered graphics. Built to last.
+              Delivering pan-India.
             </p>
             <form className="mt-10 max-w-md">
               <label className="eyebrow text-background/50">Newsletter</label>
