@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const articles = [
-  { t:"The weight of a t-shirt",          cat:"Craft",      read:"6 min", img:"/images/hero-2-DkoVx-kF.jpg.jpeg" },
-  { t:"Notes from Faridabad",             cat:"Ateliers",   read:"4 min", img:"/images/lookbook-2-DhQuyHOI.jpg.jpeg" },
-  { t:"Dressing for the room, not the season", cat:"Essay", read:"8 min", img:"/images/campaign-Bg10tBFF.jpg.jpeg" },
-  { t:"Why we don't do sales",            cat:"House Notes", read:"3 min", img:"/images/lookbook-1-C15adsYr.jpg.jpeg" },
+  { t:"The weight of a t-shirt",               cat:"Craft",       read:"6 min", img:"/images/pacific/black/DSCN5678.JPG.jpg.jpeg" },
+  { t:"Notes from Faridabad",                  cat:"Ateliers",    read:"4 min", img:"/images/pacific/black/unbothered/DSCN5701.JPG.jpg.jpeg" },
+  { t:"Dressing for the room, not the season", cat:"Essay",       read:"8 min", img:"/images/pacific/black/DSCN5642.JPG.jpg.jpeg" },
+  { t:"Why we don't do sales",                 cat:"House Notes", read:"3 min", img:"/images/pacific/black/DSCN5614.JPG.jpg.jpeg" },
 ];
 
 export default function Journal() {
@@ -21,7 +21,7 @@ export default function Journal() {
 
       <section className="grid md:grid-cols-12 gap-10 px-6 md:px-10 py-24 border-b border-line">
         <div className="md:col-span-7 relative aspect-[16/10]">
-          <Image src="/images/studio-DwVjruef.jpg.jpeg" alt="Featured" fill sizes="(max-width: 768px) 100vw, 58vw" className="object-cover"/>
+          <Image src="/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg" alt="Featured" fill sizes="(max-width: 768px) 100vw, 58vw" className="object-cover"/>
         </div>
         <article className="md:col-span-5 flex flex-col justify-end">
           <p className="eyebrow">Essay · July 2026</p>

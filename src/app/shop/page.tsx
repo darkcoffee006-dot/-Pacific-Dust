@@ -4,17 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { LayoutGrid, Rows3, SlidersHorizontal, X } from "lucide-react";
 import ProductCard from "@/components/ui/ProductCard";
-import { newArrivals, trending } from "@/data/products";
+import { catalog } from "@/data/products";
 
-const all = [...newArrivals, ...trending.filter(p => !newArrivals.find(n => n.id === p.id))];
-const CATS = ["All","Outerwear","Knitwear","Trousers","Accessories"];
+const CATS = ["All", "T-Shirts"];
 const SIZES = ["XS","S","M","L","XL"];
 
 export default function Shop() {
   const [view, setView] = useState<"grid"|"list">("grid");
   const [open, setOpen] = useState(false);
   const [cat, setCat] = useState("All");
-  const filtered = cat === "All" ? all : all.filter(p => p.category === cat);
+  const filtered = cat === "All" ? catalog : catalog.filter(p => p.category === cat);
 
   return (
     <main className="pt-40">

@@ -1,10 +1,7 @@
 import Image from "next/image";
-import { newArrivals, trending } from "@/data/products";
+import { catalog } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
 
-const all = [...newArrivals, ...trending].filter(
-  (p, idx, arr) => arr.findIndex(x => x.slug === p.slug) === idx
-);
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export default async function Category({
@@ -13,13 +10,14 @@ export default async function Category({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  const filtered = all.filter(p => p.category.toLowerCase() === category.toLowerCase());
-  const list = filtered.length ? filtered : all;
+  const filtered = catalog.filter((p) => p.category.toLowerCase() === category.toLowerCase());
+  const list = filtered.length ? filtered : catalog;
+  const heroImage = list[0]?.image ?? "/images/pacific/DSCN5501.JPG.jpg.jpeg";
 
   return (
     <main>
       <section className="relative h-[70vh] min-h-[500px] pt-24">
-        <Image src="/images/campaign-Bg10tBFF.jpg.jpeg" alt="" fill sizes="100vw" className="object-cover"/>
+        <Image src={heroImage} alt="" fill sizes="100vw" className="object-cover"/>
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40"/>
         <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-16 text-background">
           <p className="eyebrow text-background/70">The Wardrobe · {list.length} pieces</p>

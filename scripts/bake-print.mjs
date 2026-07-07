@@ -1,21 +1,16 @@
 /**
- * bake-print.mjs — v2
+ * bake-print.mjs — v5 (CORRECTED UV MAPPING)
  *
- * UV atlas analysis shows:
- *   Front body panel (gold/Mesh 3) = bottom-right of texture
- *   U: 0.52 → 0.96  (center ~0.72)
- *   V: 0.35 → 0.95  (center ~0.62, chest ~0.45)
+ * glTF UV convention: V=0 is BOTTOM of texture, V=1 is TOP
+ * Sharp image convention: Y=0 is TOP of image, Y increases downward
+ * Conversion: pixel_Y = (1 - UV_V) * SIZE
  *
- *   Texture is 1024×1024.
- *   V is flipped in sharp (V=0 = top of image, V=1 = bottom).
- *   So chest center on texture:
- *     x = 0.72 * 1024 ≈ 737
- *     y = (1 - 0.45) * 1024 ≈ 563
+ * Front panel (gold, Mesh 3) UV range:
+ *   U: 0.52 → 0.96   →  pixel X: 532 → 983   center_X = 757
+ *   V: 0.35 → 0.93   →  pixel Y: 72  → 666    (collar at Y=72, hem at Y=666)
  *
- * Print design (matches reference image):
- *   - "pacific" large bold italic gold serif — widest element
- *   - kangaroo silhouette overlapping the letters
- *   - "dust" smaller centered below
+ * Chest center: V ≈ 0.78 → pixel Y = (1-0.78)*1024 = 225
+ * Upper chest:  V ≈ 0.82 → pixel Y = (1-0.82)*1024 = 184
  */
 
 import { NodeIO } from "@gltf-transform/core";
@@ -30,23 +25,31 @@ const ROOT = resolve(__dirname, "..");
 const SIZE = 1024;
 const GOLD = "#C9A84C";
 
-// Front panel spans U:0.52-0.96 (x:532-983), V:0.35-0.95
-// Center of front panel: U=0.74 → x=758, V=0.72 (chest) → y=287
-const CX = Math.round(0.74 * SIZE);   // 758 — horizontal center of front panel
-const CY = Math.round((1 - 0.72) * SIZE); // 287 — chest height
+// Chest center — 35% down the front panel from collar
+// Panel: y 72–666, chest at 72 + 594*0.35 = 280
+const CX = 757;
+const CY = 280;
 
-console.log(`Front chest center on texture: (${CX}, ${CY})`);
+const PRINT_W = 380;
+const PRINT_H = 320;
 
-// Print fits inside front panel width (450px) with padding
-const PRINT_W = 400;
-const PRINT_H = 240;
+console.log(`Chest center (corrected): (${CX}, ${CY})`);
 
-const printSVG = `<svg width="${PRINT_W}" height="${PRINT_H}" xmlns="http://www.w3.org/2000/svg">
+// ── Kangaroo ─────────────────────────────────────────────────
+const kangBuf = readFileSync(
+  resolve(ROOT, "public/images/kangaro-removebg-preview.png")
+);
+const kangResized = await sharp(kangBuf)
+  .resize(130, 130, { fit: "contain", background: { r:0, g:0, b:0, alpha:0 } })
+  .png()
+  .toBuffer();
+
+// ── Text SVG ──────────────────────────────────────────────────
+const textSVG = `<svg width="${PRINT_W}" height="${PRINT_H}" xmlns="http://www.w3.org/2000/svg">
   <text
-    x="${PRINT_W / 2}"
-    y="140"
+    x="${PRINT_W / 2}" y="260"
     font-family="Georgia, serif"
-    font-size="130"
+    font-size="112"
     font-weight="bold"
     font-style="italic"
     fill="${GOLD}"
@@ -54,92 +57,69 @@ const printSVG = `<svg width="${PRINT_W}" height="${PRINT_H}" xmlns="http://www.
     opacity="0.92"
   >pacific</text>
   <text
-    x="${PRINT_W / 2}"
-    y="205"
+    x="${PRINT_W / 2}" y="308"
     font-family="Georgia, serif"
-    font-size="42"
+    font-size="36"
     font-weight="400"
     font-style="italic"
     fill="${GOLD}"
     text-anchor="middle"
-    opacity="0.78"
-    letter-spacing="12"
+    opacity="0.80"
+    letter-spacing="10"
   >dust</text>
 </svg>`;
 
-// Render SVG text layer
-const textBuf = await sharp(Buffer.from(printSVG))
-  .png()
-  .toBuffer();
+const textBuf = await sharp(Buffer.from(textSVG)).png().toBuffer();
 
-// ── 2. Load kangaroo, resize to fit between letters ─────────
-const kangBuf = readFileSync(
-  resolve(ROOT, "public/images/kangaro-removebg-preview.png")
-);
-// Kangaroo at 150px — proportional to new print size
-const kangResized = await sharp(kangBuf)
-  .resize(150, 150, { fit: "contain", background: { r:0, g:0, b:0, alpha:0 } })
-  .png()
-  .toBuffer();
-
-const printComposite = await sharp(textBuf)
+// Kangaroo sits above "pacific" text
+const printFinal = await sharp(textBuf)
   .composite([{
     input: kangResized,
-    top:   -10,
-    left:  Math.round(PRINT_W * 0.46 - 75),
+    top:   8,
+    left:  Math.round(PRINT_W / 2 - 65),
     blend: "over",
   }])
   .png()
   .toBuffer();
 
-// ── 4. Build the full 1024×1024 texture ─────────────────────
-// Cream base, then composite the print at chest center
+await sharp(printFinal).toFile(resolve(ROOT, "public/images/print-preview.png"));
+console.log("Print preview: http://localhost:3000/images/print-preview.png");
+
+// ── Texture ───────────────────────────────────────────────────
+const printLeft = Math.max(0, CX - Math.round(PRINT_W / 2));  // 568
+const printTop  = Math.max(0, CY - Math.round(PRINT_H / 2));  // 60
+
+console.log(`Print rect: left=${printLeft} top=${printTop} w=${PRINT_W} h=${PRINT_H}`);
+console.log(`Right edge: ${printLeft + PRINT_W} (front panel ends at 983) ✓`);
+console.log(`Bottom edge: ${printTop + PRINT_H} (front panel collar area ends ~666) ✓`);
+
 const creamBase = await sharp({
-  create: {
-    width: SIZE, height: SIZE, channels: 4,
-    background: { r: 237, g: 232, b: 220, alpha: 255 }, // #EDE8DC
-  }
+  create: { width: SIZE, height: SIZE, channels: 4,
+    background: { r:237, g:232, b:220, alpha:255 } }
 }).png().toBuffer();
 
-// Position print centered on chest UV
-const printLeft = CX - Math.round(PRINT_W / 2);
-const printTop  = CY - Math.round(PRINT_H / 2);
-
-console.log(`Print positioned at: left=${printLeft}, top=${printTop}`);
-
 const finalTexture = await sharp(creamBase)
-  .composite([{
-    input: printComposite,
-    top:   printTop,
-    left:  printLeft,
-    blend: "over",
-  }])
+  .composite([{ input: printFinal, top: printTop, left: printLeft, blend: "over" }])
   .png()
   .toBuffer();
 
-// Save a preview so we can check it in the browser
-await sharp(finalTexture)
-  .toFile(resolve(ROOT, "public/images/print-preview.png"));
-console.log("Preview: http://localhost:3000/images/print-preview.png");
+await sharp(finalTexture).toFile(resolve(ROOT, "public/images/texture-preview.png"));
+console.log("Texture preview: http://localhost:3000/images/texture-preview.png");
 
-// ── 5. Patch GLB and write ───────────────────────────────────
+// ── Patch GLB ─────────────────────────────────────────────────
 const io  = new NodeIO();
 const doc = await io.read(resolve(ROOT, "public/oversized_t-shirt.glb"));
-const root = doc.getRoot();
 
 const texture = doc.createTexture("print")
   .setImage(finalTexture)
   .setMimeType("image/png");
 
-root.listMaterials().forEach((mat) => {
-  mat.setBaseColorFactor([1, 1, 1, 1]); // white so texture shows true
+doc.getRoot().listMaterials().forEach((mat) => {
+  mat.setBaseColorFactor([1, 1, 1, 1]);
   mat.setMetallicFactor(0.0);
   mat.setRoughnessFactor(0.85);
   mat.setBaseColorTexture(texture);
 });
 
-await io.write(
-  resolve(ROOT, "public/oversized_t-shirt-printed.glb"),
-  doc
-);
-console.log("Done: public/oversized_t-shirt-printed.glb");
+await io.write(resolve(ROOT, "public/oversized_t-shirt-printed.glb"), doc);
+console.log("✓ Done: public/oversized_t-shirt-printed.glb");

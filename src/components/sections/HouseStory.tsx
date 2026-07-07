@@ -42,7 +42,7 @@ export default function HouseStory() {
             {/* Studio image */}
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/studio-DwVjruef.jpg.jpeg"
+                src="/images/pacific/white/dreams/DSCN5454.JPG.jpg.jpeg"
                 alt="Light through the atelier — natural materials"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

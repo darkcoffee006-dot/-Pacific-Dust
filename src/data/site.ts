@@ -1,4 +1,5 @@
 import type { NavItem, Testimonial, Chapter } from "@/types";
+import { catalog } from "@/data/products";
 
 export const announcementItems = [
   "Complimentary delivery across Delhi NCR & Faridabad",
@@ -52,19 +53,21 @@ export const chapters: Chapter[] = [
   },
 ];
 
-export const lookItems = [
-  { number: "01", name: "Atelier Hoodie", color: "Ivory", price: 340 },
-  { number: "02", name: "Monolith Overcoat", color: "Stone", price: 1290 },
-  { number: "03", name: "Column Trouser", color: "Cream", price: 420 },
-];
+export const lookItems = catalog.map((p, i) => ({
+  number: String(i + 1).padStart(2, "0"),
+  name: p.name,
+  color: p.colors[0],
+  price: p.price,
+  slug: p.slug,
+  image: p.image,
+}));
 
 export const footerLinks = {
   Wardrobe: [
-    { label: "New Arrivals", href: "/new-arrivals" },
-    { label: "Outerwear", href: "/outerwear" },
-    { label: "Knitwear", href: "/knitwear" },
-    { label: "Trousers", href: "/trousers" },
-    { label: "Accessories", href: "/accessories" },
+    { label: "Shop All", href: "/shop" },
+    { label: "T-Shirts", href: "/category/t-shirts" },
+    { label: "Lookbook", href: "/lookbook" },
+    { label: "Search", href: "/search" },
   ],
   "The House": [
     { label: "Our Philosophy", href: "/philosophy" },

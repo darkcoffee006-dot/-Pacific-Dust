@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function CategoryBanner() {
   const categories = [
-    { label: "Outerwear", href: "/category/outerwear", tone: "bg-stone-800 text-stone-100" },
-    { label: "Knitwear", href: "/category/knitwear", tone: "bg-stone-100 text-stone-800" },
-    { label: "Trousers", href: "/category/trousers", tone: "bg-amber-50 text-stone-800" },
-    { label: "Accessories", href: "/category/accessories", tone: "bg-stone-200 text-stone-800" },
+    { label: "All Tees", href: "/shop", tone: "bg-stone-800 text-stone-100" },
+    { label: "T-Shirts", href: "/category/t-shirts", tone: "bg-stone-100 text-stone-800" },
+    { label: "Lookbook", href: "/lookbook", tone: "bg-amber-50 text-stone-800" },
+    { label: "Search", href: "/search", tone: "bg-stone-200 text-stone-800" },
   ];
 
   return (
@@ -13,7 +13,7 @@ export default function CategoryBanner() {
       <div className="max-w-screen-xl mx-auto px-6 md:px-10">
         <div className="flex items-center gap-3 overflow-x-auto no-scrollbar">
           <p className="text-[10px] tracking-[0.4em] uppercase text-stone-400 shrink-0 mr-3">
-            Wardrobe · Categories
+            Drop 01 · Shop
           </p>
           {categories.map((cat) => (
             <Link

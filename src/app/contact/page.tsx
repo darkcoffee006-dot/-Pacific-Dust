@@ -54,7 +54,7 @@ export default function Contact() {
         </div>
 
         <div className="relative bg-surface min-h-[500px] md:min-h-full">
-          <Image src="/images/studio-DwVjruef.jpg.jpeg" alt="Studio" fill sizes="50vw" className="object-cover opacity-90"/>
+          <Image src="/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg" alt="Studio" fill sizes="50vw" className="object-cover opacity-90"/>
           <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"/>
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-background grid gap-4">
             {[

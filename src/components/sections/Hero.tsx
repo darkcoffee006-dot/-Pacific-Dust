@@ -79,7 +79,7 @@ export default function Hero() {
       >
         {/* Full-bleed image */}
         <img
-          src="/images/hero-1-Mj2Hbnrp.jpg.jpeg"
+          src="/images/pacific/black/city of angels/DSCN5425.JPG.jpg.jpeg"
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover"

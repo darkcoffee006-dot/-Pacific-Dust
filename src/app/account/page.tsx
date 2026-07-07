@@ -7,7 +7,7 @@ export default function Account() {
   return (
     <main className="pt-24 grid md:grid-cols-2 min-h-screen">
       <div className="relative hidden md:block">
-        <Image src="/images/campaign-Bg10tBFF.jpg.jpeg" alt="" fill sizes="50vw" className="object-cover"/>
+        <Image src="/images/pacific/black/DSCN5601.JPG.jpg.jpeg" alt="" fill sizes="50vw" className="object-cover"/>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-ink/30"/>
         <div className="relative z-10 p-16 h-full flex flex-col justify-end text-background">
           <p className="eyebrow text-background/70">Members of the house</p>

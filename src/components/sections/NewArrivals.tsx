@@ -10,7 +10,7 @@ export default function NewArrivals() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <p className="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-3">
-              Newly Arrived — 04
+              Newly Arrived — {String(newArrivals.length).padStart(2, "0")}
             </p>
             <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-light leading-tight text-stone-900">
               Considered weights

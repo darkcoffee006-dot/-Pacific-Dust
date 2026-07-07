@@ -7,7 +7,7 @@ export default function CampaignBanner() {
       {/* ── Full-bleed image ─────────────────────────────────── */}
       <div className="relative aspect-[16/7] md:aspect-[16/6]">
         <Image
-          src="/images/campaign-Bg10tBFF.jpg.jpeg"
+          src="/images/pacific/black/DSCN5601.JPG.jpg.jpeg"
           alt="Campaign AW26 — Silence is the last luxury"
           fill
           sizes="100vw"

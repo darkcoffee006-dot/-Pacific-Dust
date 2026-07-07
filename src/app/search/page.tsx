@@ -19,8 +19,14 @@ const PRICE_RANGES = [
 ];
 
 const TRENDING_SEARCHES = [
-  "Oversized T-Shirt", "Gradient", "Dreams", "Streetwear",
-  "Insane Culture", "Screen Print", "DTF", "Box Fit",
+  "City of Angels",
+  "Dreams",
+  "Unbothered",
+  "Gradient Soul",
+  "Oversized T-Shirt",
+  "Screen Print",
+  "DTF",
+  "French Terry",
 ];
 
 /* ── Collapsible filter section ─────────────────────────── */

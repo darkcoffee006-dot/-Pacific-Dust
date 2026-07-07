@@ -20,7 +20,7 @@ export default function About() {
       ══════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] bg-ink flex flex-col justify-end overflow-hidden">
         <Image
-          src="/images/campaign-Bg10tBFF.jpg.jpeg"
+          src="/images/pacific/white/DSCN5779.JPG.jpg.jpeg"
           alt=""
           fill
           sizes="100vw"
@@ -84,7 +84,7 @@ export default function About() {
         {/* Right — image */}
         <div className="relative min-h-[400px]">
           <Image
-            src="/images/lookbook-1-C15adsYr.jpg.jpeg"
+            src="/images/pacific/black/DSCN5671.JPG.jpg.jpeg"
             alt=""
             fill
             sizes="50vw"
@@ -146,7 +146,7 @@ export default function About() {
           {/* Act 2 — image break */}
           <div className="md:col-span-12 relative aspect-[16/7] overflow-hidden">
             <Image
-              src="/images/hero-2-DkoVx-kF.jpg.jpeg"
+              src="/images/pacific/white/DSCN5784.JPG.jpg.jpeg"
               alt=""
               fill
               sizes="100vw"
@@ -268,7 +268,7 @@ export default function About() {
       ══════════════════════════════════════════════════════ */}
       <section className="relative h-[70vh] min-h-[480px]">
         <Image
-          src="/images/lookbook-2-DhQuyHOI.jpg.jpeg"
+          src="/images/pacific/white/DSCN5785.JPG.jpg.jpeg"
           alt=""
           fill
           sizes="100vw"
