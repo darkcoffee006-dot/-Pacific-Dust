@@ -154,7 +154,6 @@ export const catalog: Product[] = [
       black("unbothered", "DSCN5514.JPG"),
       black("unbothered", "DSCN5519.JPG"),
       black("unbothered", "DSCN5520.JPG"),
-      black("unbothered", "DSCN5555.JPG"),
       black("unbothered", "DSCN5597.JPG"),
     ],
     tags: ["graphic", "dtf", "statement", "oversized", "minimal"],

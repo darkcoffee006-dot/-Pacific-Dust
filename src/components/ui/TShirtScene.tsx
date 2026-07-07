@@ -52,7 +52,7 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
   const wrapRef  = useRef<HTMLDivElement>(null);
   const mvRef    = useRef<MvElement | null>(null);
   const rafRef   = useRef<number>(0);
-  const angleRef = useRef(0);    // current azimuth deg  (0 → 180 → 0 …)
+  const angleRef = useRef(180);  // current azimuth deg (starts at front)
   const dirRef   = useRef(1);    // +1 forward, -1 backward
   const userRef  = useRef(false);// true while user is dragging
 
@@ -78,12 +78,12 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
       if (mv && !userRef.current) {
         angleRef.current += dirRef.current * 0.5;   // 0.5°/frame ≈ 6s half-turn
 
-        if (angleRef.current >= 180) {
-          angleRef.current = 180;
+        if (angleRef.current >= 270) {
+          angleRef.current = 270;
           dirRef.current = -1;
         }
-        if (angleRef.current <= 0) {
-          angleRef.current = 0;
+        if (angleRef.current <= 90) {
+          angleRef.current = 90;
           dirRef.current = 1;
         }
 
@@ -104,6 +104,7 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
         /* Sync min/max so user drag is also horizontal-only */
         mv.setAttribute("min-camera-orbit", "auto 85deg auto");
         mv.setAttribute("max-camera-orbit", "auto 95deg auto");
+        mv.setAttribute("camera-orbit", "180deg 90deg auto");
         rafRef.current = requestAnimationFrame(tick);
       }
     }, 600);
@@ -151,7 +152,7 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
           tone-mapping="commerce"
           environment-image="legacy"
           /* Start front-facing, eye-level (phi=90deg) */
-          camera-orbit="0deg 90deg auto"
+          camera-orbit="180deg 90deg auto"
           field-of-view="26deg"
           /* Vertical locked at 85–95deg — prevents tilting up/down */
           min-camera-orbit="auto 85deg auto"
