@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const groups = [
   { title:"Orders & Delivery", id:"orders", items:[
-    ["How do I place an order?","Add items to your bag and tap 'Order via WhatsApp'. We confirm every order personally on +91 85958 18638."],
-    ["Where do you deliver?","Delhi, Noida, Gurgaon, Faridabad and Ghaziabad only. We are expanding soon."],
+    ["How do I place an order?","Add items to your bag and tap 'Order via WhatsApp'. We confirm every order personally on +91 96436 44455."],
+    ["Where do you deliver?","We deliver Pan India."],
     ["How long does delivery take?","3–5 working days standard. Express next-day available for ₹99."],
     ["Is delivery free?","Free on orders above ₹2,000. Otherwise ₹99."],
   ]},

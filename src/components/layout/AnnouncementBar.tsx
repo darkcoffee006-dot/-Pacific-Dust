@@ -1,10 +1,10 @@
 "use client";
 export default function AnnouncementBar() {
   const items = [
-    "Complimentary delivery across Delhi NCR & Faridabad",
+    "Complimentary delivery Pan India",
     "New Arrivals — Autumn / Winter 26",
     "Proudly made in India — Crafted with precision",
-    "Now delivering to Delhi · Noida · Gurgaon · Faridabad · Ghaziabad",
+    "Now delivering Pan India",
     "Free returns within 15 days — No questions asked",
   ];
   const repeated = [...items, ...items];

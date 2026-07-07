@@ -58,8 +58,8 @@ export default function QuickAddModal({ product, onClose }: Props) {
   };
 
   const wa = product
-    ? `https://wa.me/918595818638?text=${encodeURIComponent(
-        `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Delhi NCR / Faridabad`
+    ? `https://wa.me/919643644455?text=${encodeURIComponent(
+        `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Pan India`
       )}`
     : "#";
 

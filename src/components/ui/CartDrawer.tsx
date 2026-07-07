@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Minus, Plus, Trash2, ShoppingBag, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "918595818638"; // +91 85958 18638
+const WHATSAPP_NUMBER = "919643644455"; // +91 96436 44455
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 /* ── Build WhatsApp message ─────────────────────────────────── */
@@ -25,7 +25,7 @@ function buildWhatsAppURL(items: ReturnType<typeof useCart>["items"], total: num
     `*Total: ₹${total.toLocaleString("en-IN")}*`,
     "",
     "Please confirm availability and delivery details.",
-    "Delivery area: Delhi NCR / Faridabad",
+    "Delivery area: Pan India",
   ].join("\n");
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -195,7 +195,7 @@ export default function CartDrawer() {
                 </div>
 
                 <p className="text-[10px] text-stone-400 leading-relaxed">
-                  Delivery available across Delhi · Noida · Gurgaon · Faridabad · Ghaziabad.
+                  Pan India delivery available.
                   Final price confirmed on WhatsApp.
                 </p>
 

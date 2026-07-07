@@ -17,10 +17,10 @@ export default function Contact() {
 
       <section className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line border-b border-line">
         {[
-          { Icon:Mail,   label:"WhatsApp",  value:"+91 85958 18638",    note:"Order & support",
-            href:"https://wa.me/918595818638" },
-          { Icon:Phone,  label:"Call",      value:"+91 85958 18638",    note:"Mon–Sat 10–19 IST",
-            href:"tel:+918595818638" },
+          { Icon:Mail,   label:"WhatsApp",  value:"+91 96436 44455",    note:"Order & support",
+            href:"https://wa.me/919643644455" },
+          { Icon:Phone,  label:"Email",     value:"pacificdust1@gmail.com", note:"We reply within a day",
+            href:"mailto:pacificdust1@gmail.com" },
           { Icon:AtSign, label:"Instagram", value:"@pacific_dust_",     note:"Journal & campaign",
             href:"https://www.instagram.com/pacific_dust_?igsh=MXdseDRuZHNsZGVnbA==" },
         ].map(s => (
@@ -77,8 +77,8 @@ export default function Contact() {
         <p className="eyebrow">Frequently asked</p>
         <div className="mt-12 max-w-3xl divide-y divide-line border-y border-line">
           {[
-            ["How do I order?","Message us on WhatsApp at +91 85958 18638 or add to cart and tap 'Order via WhatsApp'."],
-            ["Do you deliver outside Delhi NCR?","Currently we deliver to Delhi, Noida, Gurgaon, Faridabad and Ghaziabad only."],
+            ["How do I order?","Message us on WhatsApp at +91 96436 44455 or add to cart and tap 'Order via WhatsApp'."],
+            ["Do you deliver outside Delhi NCR?","Yes! We now deliver Pan India."],
             ["Do you offer returns?","Free returns within 15 days. We collect from your door."],
           ].map(([q,a]) => (
             <details key={q} className="py-6 group">

@@ -140,7 +140,7 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
         {/* @ts-ignore */}
         <model-viewer
           ref={(el: MvElement | null) => { mvRef.current = el; }}
-          src="/oversized_t-shirt-printed.glb"
+          src="/oversized_t-shirt-printed-test-front.glb"
           alt="Pacific Dust oversized cream t-shirt"
           camera-controls
           disable-zoom

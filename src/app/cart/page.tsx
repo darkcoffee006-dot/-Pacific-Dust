@@ -11,8 +11,8 @@ export default function CartPage() {
   const shipping = totalPrice > 2000 ? 0 : 99;
   const progress = Math.min(100, (totalPrice / 2000) * 100);
 
-  const wa = items.length ? `https://wa.me/918595818638?text=${encodeURIComponent(
-    `Hello Pacific Dust! 🛍️\n\nI'd like to place an order:\n\n${items.map(i=>`• ${i.product.name} (${i.color}, Size: ${i.size}) × ${i.qty} — ₹${(i.product.price*i.qty).toLocaleString("en-IN")}`).join("\n")}\n\n*Total: ₹${totalPrice.toLocaleString("en-IN")}*\n\nDelivery: Delhi NCR / Faridabad`
+  const wa = items.length ? `https://wa.me/919643644455?text=${encodeURIComponent(
+    `Hello Pacific Dust! 🛍️\n\nI'd like to place an order:\n\n${items.map(i=>`• ${i.product.name} (${i.color}, Size: ${i.size}) × ${i.qty} — ₹${(i.product.price*i.qty).toLocaleString("en-IN")}`).join("\n")}\n\n*Total: ₹${totalPrice.toLocaleString("en-IN")}*\n\nDelivery: Pan India`
   )}` : "#";
 
   return (
@@ -72,7 +72,7 @@ export default function CartPage() {
               className="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-sm transition-colors">
               <MessageCircle size={14}/> Order via WhatsApp
             </a>
-            <p className="mt-4 text-[11px] text-ink-muted text-center">Delhi NCR · Faridabad · Noida · Gurgaon</p>
+            <p className="mt-4 text-[11px] text-ink-muted text-center">Pan India Delivery</p>
           </aside>
         </div>
       )}

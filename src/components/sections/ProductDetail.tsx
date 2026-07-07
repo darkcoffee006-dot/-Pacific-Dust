@@ -25,8 +25,8 @@ export default function ProductDetail({ product }: { product: Product }) {
     setTimeout(() => setAdded(false), 2500);
   };
 
-  const wa = `https://wa.me/918595818638?text=${encodeURIComponent(
-    `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Delhi NCR / Faridabad`
+  const wa = `https://wa.me/919643644455?text=${encodeURIComponent(
+    `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Pan India`
   )}`;
 
   const gallery = product.images?.length

@@ -5,7 +5,7 @@ export const announcementItems = [
   "Complimentary delivery across Delhi NCR & Faridabad",
   "New Arrivals — Autumn / Winter 26",
   "Proudly made in India — Crafted with precision",
-  "Now delivering to Delhi · Noida · Gurgaon · Faridabad · Ghaziabad",
+  "Now delivering Pan India",
   "Free returns within 15 days — No questions asked",
   "Book a private styling session — Delhi NCR only",
 ];
