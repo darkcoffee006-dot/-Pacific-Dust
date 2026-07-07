@@ -8,8 +8,9 @@ import { Heart, Minus, Plus, Truck, RotateCcw, Ruler, MessageCircle } from "luci
 import { useCart } from "@/context/CartContext";
 import { allProducts } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
+import SizeGuideModal from "@/components/ui/SizeGuideModal";
 
-const DEFAULT_SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
+const DEFAULT_SIZES = ["S", "M", "L", "XL"];
 
 export default function ProductDetail({ product }: { product: Product }) {
   const { addItem, openCart } = useCart();
@@ -18,6 +19,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   const [color, setColor] = useState(product.colors[0]);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
+  const [sizeGuide, setSizeGuide] = useState(false);
 
   const handleAdd = () => {
     for (let i = 0; i < qty; i++) addItem(product, size, color);
@@ -163,11 +165,14 @@ export default function ProductDetail({ product }: { product: Product }) {
           <div className="mt-8">
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em]">
               <span>Size</span>
-              <button className="normal-case tracking-normal text-ink-muted flex items-center gap-1.5 link-underline text-xs">
+              <button
+                onClick={() => setSizeGuide(true)}
+                className="normal-case tracking-normal text-ink-muted flex items-center gap-1.5 link-underline text-xs"
+              >
                 <Ruler size={12} /> Size guide
               </button>
             </div>
-            <div className="mt-3 grid grid-cols-3 sm:grid-cols-6 gap-2">
+            <div className="mt-3 grid grid-cols-4 gap-2">
               {sizes.map((s) => (
                 <button
                   key={s}
@@ -286,6 +291,8 @@ export default function ProductDetail({ product }: { product: Product }) {
           </div>
         </section>
       )}
+
+      {sizeGuide && <SizeGuideModal onClose={() => setSizeGuide(false)} />}
     </main>
   );
 }

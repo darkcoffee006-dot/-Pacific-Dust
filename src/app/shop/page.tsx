@@ -7,7 +7,7 @@ import ProductCard from "@/components/ui/ProductCard";
 import { catalog } from "@/data/products";
 
 const CATS = ["All", "T-Shirts"];
-const SIZES = ["XS","S","M","L","XL"];
+const SIZES = ["S","M","L","XL"];
 
 export default function Shop() {
   const [view, setView] = useState<"grid"|"list">("grid");

@@ -1,6 +1,6 @@
 import type { Product } from "@/types";
 
-const SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
+const SIZES = ["S", "M", "L", "XL"];
 const WASH = [
   "Hand Wash Recommended",
   "Wash Inside Out in Cold Water",
