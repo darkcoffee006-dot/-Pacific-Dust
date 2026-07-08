@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shop — All Pieces",
+  title: "Buy Oversized T-Shirts Online India — Pacific Dust Shop",
   description:
-    "Shop all Pacific Dust Drop 01 tees — City of Angels, Dreams, Unbothered, Gradient Soul. 240 GSM French Terry. Pan-India delivery.",
+    "Buy premium 240 GSM oversized graphic tees online from Pacific Dust. City of Angels, Dreams, Unbothered & Gradient Soul. Made in Delhi NCR. Free delivery above Rs. 2000. Sizes S, M, L, XL.",
   alternates: { canonical: "https://pacificdust.in/shop" },
   openGraph: {
-    title: "Pacific Dust Shop — Drop 01",
+    title: "Pacific Dust Shop — Buy Oversized T-Shirts Online India",
     description:
-      "City of Angels, Dreams, Unbothered, Gradient Soul. 240 GSM French Terry oversized tees. Pan-India delivery.",
+      "240 GSM French Terry oversized graphic tees. City of Angels, Dreams, Unbothered & Gradient Soul. Pan-India delivery. Free shipping above Rs. 2000.",
     url: "https://pacificdust.in/shop",
     images: [
       {
         url: "/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg",
         width: 1200,
         height: 630,
-        alt: "Pacific Dust Drop 01 — all tees",
+        alt: "Pacific Dust — Buy Oversized Graphic Tees Online India",
       },
     ],
   },

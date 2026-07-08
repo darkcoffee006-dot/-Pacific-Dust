@@ -127,6 +127,18 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap"
           rel="stylesheet"
         />
+        {/* LCP preload — hero image on mobile (most visits) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/pacific/black/city of angels/city_of_angels_hanger.jpg"
+          fetchPriority="high"
+        />
+        {/* Geo / local SEO signals for Delhi NCR */}
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi NCR, India" />
+        <meta name="geo.position" content="28.6139;77.2090" />
+        <meta name="ICBM" content="28.6139, 77.2090" />
         <Script
           id="schema-org"
           type="application/ld+json"

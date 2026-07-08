@@ -19,7 +19,7 @@ export default function BestSellers() {
             </h2>
           </div>
           <Link
-            href="/collections/permanent"
+            href="/collections"
             className="text-[11px] tracking-widest uppercase text-stone-500 hover:text-stone-900 transition-colors shrink-0"
           >
             See all →

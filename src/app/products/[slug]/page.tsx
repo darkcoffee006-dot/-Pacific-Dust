@@ -24,10 +24,9 @@ export async function generateMetadata({
 
   const url = `${SITE_URL}/products/${product.slug}`;
   const imageUrl = product.image ?? "/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg";
-  const title = `${product.name} — ₹${product.price.toLocaleString("en-IN")}`;
-  const description =
-    product.shortDesc ??
-    `${product.name} by Pacific Dust. ${product.material ?? "240 GSM French Terry"}. ${product.fit ?? "Oversized box fit"}. Pan-India delivery.`;
+  const title = `Buy ${product.name} Online — ${product.fit ?? "Oversized Tee"} | Pacific Dust`;
+  const description = product.shortDesc ??
+    `Buy ${product.name} by Pacific Dust. ${product.material ?? "240 GSM French Terry"}. ${product.fit ?? "Oversized box fit"}. Sizes S, M, L, XL. Pan-India delivery. Free shipping above Rs. 2000.`;
 
   return {
     title,

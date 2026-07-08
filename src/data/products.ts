@@ -57,7 +57,7 @@ export const catalog: Product[] = [
       black("city of angels", "DSCN5593.JPG"),
     ],
     tags: ["graphic", "streetwear", "jersey", "varsity", "oversized"],
-    shortDesc: "Vintage athletic aesthetics reimagined for modern streets.",
+    shortDesc: "Buy City of Angels Tee — 240 GSM oversized black graphic tee. Vintage jersey-inspired screen print. Sizes S–XL. Free delivery above Rs. 2000.",
     description:
       "The City of Angels Tee draws inspiration from vintage athletic jerseys, reimagined through a contemporary streetwear lens. Crafted from heavyweight 240 GSM premium French Terry cotton, it delivers exceptional breathability, a soft hand feel, and lasting comfort while maintaining a structured silhouette. The oversized box fit, premium ribbed crew collar, and layered front graphics paired with the bold jersey-style 07 back print create a piece that blends timeless sportswear aesthetics with elevated everyday wear. Designed to hold its shape, resist fading, and stand apart season after season.",
     features: [
@@ -111,7 +111,7 @@ export const catalog: Product[] = [
       white("dreams", "DSCN5591.JPG"),
     ],
     tags: ["graphic", "celestial", "minimal", "oversized", "dreams"],
-    shortDesc: "Minimalist front, celestial back. A reminder to dream bigger.",
+    shortDesc: "Buy Dreams Tee — 240 GSM oversized white graphic tee. Minimalist front, celestial back print. Sizes S–XL. Pan-India delivery.",
     description:
       "The Dreams Tee is a reminder that every great journey begins with imagination. Designed with minimalist front detailing and a bold celestial graphic on the back, it captures the pursuit of limitless ambition through clean, contemporary design. Crafted from 240 GSM premium French Terry cotton, it offers exceptional breathability, a soft hand feel, and a structured drape that holds its shape wear after wear. Finished with our signature oversized box fit and premium ribbed crew collar, this piece delivers everyday comfort with a statement that reaches beyond the ordinary.",
     features: [
@@ -157,7 +157,7 @@ export const catalog: Product[] = [
       black("unbothered", "DSCN5597.JPG"),
     ],
     tags: ["graphic", "dtf", "statement", "oversized", "minimal"],
-    shortDesc: "Quiet confidence. Bold back artwork via premium DTF printing.",
+    shortDesc: "Buy Unbothered Tee — 240 GSM oversized black graphic tee. Premium DTF print, bold back artwork. Sizes S–XL. Pan-India delivery.",
     description:
       "The Unbothered Tee is built for those who let their actions speak louder than opinions. Featuring a minimal front graphic and a bold statement artwork across the back, it embodies quiet confidence and unwavering focus. Crafted from 240 GSM premium French Terry cotton, it delivers a breathable, ultra-soft feel with a structured oversized silhouette that holds its shape wear after wear. The artwork is produced using premium DTF (Direct-to-Film) printing, allowing for sharp detailing, rich colour depth, and a durable finish that stays vibrant over time. Finished with a premium ribbed crew collar, this piece is designed to make a statement without ever needing to raise its voice.",
     features: [
@@ -212,7 +212,7 @@ export const catalog: Product[] = [
       white("Gradient Soul", "DSCN5551.JPG"),
     ],
     tags: ["graphic", "gradient", "nature", "desert", "oversized"],
-    shortDesc: "Desert tones. Higher hopes. Earthy textures, untamed horizons.",
+    shortDesc: "Buy Gradient Soul Tee — 240 GSM oversized white graphic tee. Desert-inspired screen print, earthy tones. Sizes S–XL. Pan-India delivery.",
     description:
       "The Gradient Soul Tee is inspired by nature's quiet contrasts—where rugged desert landscapes meet endless skies. Featuring a minimalist chest graphic and an expressive back artwork, this piece reflects the beauty found in raw textures and untamed horizons. Crafted from 240 GSM premium French Terry cotton, it delivers exceptional breathability, a soft hand feel, and a structured boxy silhouette that drapes effortlessly. Finished with premium screen printing, the earthy tones and intricate details are brought to life with lasting clarity and depth. Designed for those who carry calm confidence and embrace every journey with purpose. \"Desert tones. Higher hopes.\" It's more than a graphic—it's a mindset.",
     features: [

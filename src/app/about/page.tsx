@@ -33,7 +33,7 @@ export default function About() {
       <section className="relative min-h-[90vh] bg-ink flex flex-col justify-end overflow-hidden">
         <Image
           src="/images/pacific/white/DSCN5779.JPG.jpg.jpeg"
-          alt=""
+          alt="Pacific Dust Drop 01 oversized streetwear tees — Delhi NCR"
           fill
           sizes="100vw"
           className="object-cover object-center opacity-30"
@@ -83,7 +83,7 @@ export default function About() {
         <div className="relative min-h-[400px]">
           <Image
             src="/images/pacific/black/DSCN5671.JPG.jpg.jpeg"
-            alt=""
+            alt="Pacific Dust oversized graphic tee worn in Delhi NCR"
             fill
             sizes="50vw"
             className="object-cover"
@@ -142,7 +142,7 @@ export default function About() {
           <div className="md:col-span-12 relative aspect-[16/7] overflow-hidden">
             <Image
               src="/images/pacific/white/DSCN5784.JPG.jpg.jpeg"
-              alt=""
+              alt="Pacific Dust streetwear — built from the streets, worn beyond them"
               fill
               sizes="100vw"
               className="object-cover object-center"
@@ -256,7 +256,7 @@ export default function About() {
       <section className="relative h-[70vh] min-h-[480px]">
         <Image
           src="/images/pacific/white/DSCN5785.JPG.jpg.jpeg"
-          alt=""
+          alt="Pacific Dust — premium Indian streetwear brand, Delhi NCR"
           fill
           sizes="100vw"
           className="object-cover"
