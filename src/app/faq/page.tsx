@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Pacific Dust FAQ — Orders, Delivery, Returns & Sizing",
   description:
     "Frequently asked questions about Pacific Dust — how to order, pan-India delivery, free returns within 15 days, sizing guide, and where Pacific Dust tees are made.",
-  alternates: { canonical: "https://pacificdust.in/faq" },
+  alternates: { canonical: "https://pacificdust.co.in/faq" },
   openGraph: {
     title: "Pacific Dust FAQ — Orders, Delivery, Returns & Sizing",
     description:
       "Everything you need to know about Pacific Dust — ordering via WhatsApp, pan-India delivery, 15-day free returns.",
-    url: "https://pacificdust.in/faq",
+    url: "https://pacificdust.co.in/faq",
   },
 };
 

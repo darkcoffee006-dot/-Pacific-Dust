@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "Journal",
   description:
     "Stories, ideas, and notes from the Pacific Dust studio. Craft, culture, and the thinking behind our drops.",
-  alternates: { canonical: "https://pacificdust.in/journal" },
+  alternates: { canonical: "https://pacificdust.co.in/journal" },
   openGraph: {
     title: "Pacific Dust Journal — Ideas behind the cloth.",
     description: "Stories, ideas, and notes from the Pacific Dust studio.",
-    url: "https://pacificdust.in/journal",
+    url: "https://pacificdust.co.in/journal",
   },
 };
 

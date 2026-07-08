@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 const nextConfig: NextConfig = {
   /* ── Image optimisation ─────────────────────────────────── */
@@ -56,7 +56,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.pacificdust.in" }],
+        has: [{ type: "host", value: "www.pacificdust.co.in" }],
         destination: `${SITE_URL}/:path*`,
         permanent: true,
       },

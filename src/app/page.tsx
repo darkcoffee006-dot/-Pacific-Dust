@@ -14,7 +14,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Newsletter from "@/components/sections/Newsletter";
 import { catalog } from "@/data/products";
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 // ─── Metadata ────────────────────────────────────────────────
 // Title leads with brand name so "pacific dust" search resolves here

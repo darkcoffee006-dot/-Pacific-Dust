@@ -4,7 +4,7 @@ import { allProducts } from "@/data/products";
 import { notFound } from "next/navigation";
 import ProductDetail from "@/components/sections/ProductDetail";
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 export function generateStaticParams() {
   return allProducts.map((p) => ({ slug: p.slug }));

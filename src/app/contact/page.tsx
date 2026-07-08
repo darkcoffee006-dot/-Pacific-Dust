@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Contact Pacific Dust — WhatsApp, Instagram & Studio",
   description:
     "Contact Pacific Dust — WhatsApp +91 96436 44455, Instagram @pacific_dust_, or our contact form. Available Mon–Sat 10am–7pm IST. Delhi NCR studio by appointment.",
-  alternates: { canonical: "https://pacificdust.in/contact" },
+  alternates: { canonical: "https://pacificdust.co.in/contact" },
   openGraph: {
     title: "Contact Pacific Dust",
     description:
       "WhatsApp +91 96436 44455, DM @pacific_dust_ on Instagram. We reply personally within a day.",
-    url: "https://pacificdust.in/contact",
+    url: "https://pacificdust.co.in/contact",
   },
 };
 

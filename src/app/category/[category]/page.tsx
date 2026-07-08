@@ -4,7 +4,7 @@ import { catalog } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
 import Link from "next/link";
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 /* ── Category display config ────────────────────────────────── */
 const CATEGORY_META: Record<string, { title: string; heading: string; description: string }> = {

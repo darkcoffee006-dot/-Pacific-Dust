@@ -25,7 +25,7 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 // ─── Metadata ────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -157,7 +157,7 @@ const organizationSchema = {
   sameAs: [
     "https://www.instagram.com/pacific_dust_",
     "https://wa.me/919643644455",
-    "https://pacificdust.in",
+    "https://pacificdust.co.in",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",

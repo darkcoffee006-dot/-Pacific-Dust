@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "About Pacific Dust — Premium Indian Streetwear Brand, Delhi NCR",
   description:
     "Pacific Dust is a premium Indian streetwear brand founded in Delhi NCR in 2024 by two friends obsessed with quality. 240 GSM French Terry oversized tees — built to last, made with intent.",
-  alternates: { canonical: "https://pacificdust.in/about" },
+  alternates: { canonical: "https://pacificdust.co.in/about" },
   openGraph: {
     title: "About Pacific Dust — Premium Indian Streetwear Brand",
     description:
       "Pacific Dust was founded in Delhi NCR in 2024. Premium 240 GSM oversized graphic tees. We refuse to settle.",
-    url: "https://pacificdust.in/about",
+    url: "https://pacificdust.co.in/about",
     images: [{ url: "/images/pacific/white/DSCN5779.JPG.jpg.jpeg", width: 1200, height: 630, alt: "Pacific Dust — Indian Streetwear Brand, Delhi NCR" }],
   },
 };

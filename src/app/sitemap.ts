@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { catalog } from "@/data/products";
 
-const SITE_URL = "https://pacificdust.in";
+const SITE_URL = "https://pacificdust.co.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
