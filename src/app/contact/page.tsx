@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, AtSign } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Pacific Dust. WhatsApp, Instagram, or our contact form. Available Mon–Sat, 10am–7pm IST.",
+  alternates: { canonical: "https://pacificdust.in/contact" },
+  openGraph: {
+    title: "Contact Pacific Dust",
+    description: "WhatsApp +91 96436 44455 or DM @pacific_dust_ on Instagram. We reply personally.",
+    url: "https://pacificdust.in/contact",
+  },
+};
 
 export default function Contact() {
   return (

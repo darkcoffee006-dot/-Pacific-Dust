@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import NewArrivals from "@/components/sections/NewArrivals";
 import CategoryBanner from "@/components/sections/CategoryBanner";
@@ -10,6 +11,10 @@ import Trending from "@/components/sections/Trending";
 import Chapters from "@/components/sections/Chapters";
 import Testimonials from "@/components/sections/Testimonials";
 import Newsletter from "@/components/sections/Newsletter";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://pacificdust.in" },
+};
 
 export default function HomePage() {
   return (

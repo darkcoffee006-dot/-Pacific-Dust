@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { catalog } from "@/data/products";
 import { allLookbookShots, lookbookChapters, lookbookHero } from "@/data/lookbook";
+
+export const metadata: Metadata = {
+  title: "Lookbook — Drop 01 AW 26",
+  description:
+    "Pacific Dust Drop 01 lookbook. Four tees. Four stories. City of Angels, Unbothered, Dreams, Gradient Soul — photographed across Delhi NCR.",
+  alternates: { canonical: "https://pacificdust.in/lookbook" },
+  openGraph: {
+    title: "Pacific Dust Lookbook — Drop 01 AW 26",
+    description: "Four tees. Four stories. Photographed across Delhi NCR.",
+    url: "https://pacificdust.in/lookbook",
+    images: [{ url: "/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg", width: 1200, height: 630, alt: "Pacific Dust Drop 01 lookbook" }],
+  },
+};
 
 function productLinks(slugs: string[]) {
   const unique = [...new Set(slugs)];

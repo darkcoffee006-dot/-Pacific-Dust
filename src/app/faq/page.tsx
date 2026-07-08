@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: "FAQ — Delivery, Returns, Sizing",
+  description:
+    "Everything about Pacific Dust — orders, delivery, returns, sizing, alterations. Pan-India delivery. Free on orders above ₹2,000.",
+  alternates: { canonical: "https://pacificdust.in/faq" },
+  openGraph: {
+    title: "Pacific Dust FAQ — Delivery, Returns, Sizing",
+    description: "Pan-India delivery. Free returns within 15 days. Size guide on every product page.",
+    url: "https://pacificdust.in/faq",
+  },
+};
 
 const groups = [
   { title:"Orders & Delivery", id:"orders", items:[
@@ -22,9 +36,30 @@ const groups = [
   ]},
 ];
 
+/* ── FAQPage structured data ────────────────────────────────── */
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: groups.flatMap((g) =>
+    g.items.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    }))
+  ),
+};
+
 export default function Faq() {
   return (
     <main>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="pt-40 pb-24 px-6 md:px-10 border-b border-line">
         <p className="eyebrow">Answers · Support</p>
         <h1 className="font-display text-6xl md:text-[10rem] mt-8 leading-[0.88]">Everything,<br/><em className="italic font-light">explained.</em></h1>

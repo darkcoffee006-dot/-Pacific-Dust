@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Pacific Dust exists for the people who refuse to settle. A premium streetwear brand born in Delhi NCR — 240 GSM French Terry, Drop 01 live now.",
+  alternates: { canonical: "https://pacificdust.in/about" },
+  openGraph: {
+    title: "About Pacific Dust — We're never satisfied.",
+    description:
+      "What started as two friends with a vision became an obsession with creating pieces that look premium, feel premium, and live beyond trends.",
+    url: "https://pacificdust.in/about",
+    images: [{ url: "/images/pacific/white/DSCN5779.JPG.jpg.jpeg", width: 1200, height: 630, alt: "Pacific Dust story" }],
+  },
+};
 
 function Stat({ n, label }: { n: string; label: string }) {
   return (

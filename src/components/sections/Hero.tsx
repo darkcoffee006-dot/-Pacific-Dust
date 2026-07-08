@@ -80,10 +80,10 @@ export default function Hero() {
         {/* Full-bleed image */}
         <img
           src="/images/pacific/black/city of angels/city_of_angels_hanger.jpg"
-          alt="City of Angels Tee on Hanger"
-          aria-hidden
+          alt="Pacific Dust Drop 01 — City of Angels Tee on hanger"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: "center 25%" }}
+          fetchPriority="high"
         />
 
         {/* Warm cream gradient — top fade for legibility, bottom fade for text */}
@@ -250,6 +250,9 @@ export default function Hero() {
         background:"radial-gradient(ellipse 90% 88% at 50% 48%, transparent 38%, rgba(200,192,170,0.45) 100%)" }} />
 
       <div ref={heroRef} className="absolute inset-0" style={{ zIndex:3 }}>
+
+        {/* Visually-hidden h1 for SEO & screen readers — visual brand name is decorative */}
+        <h1 className="sr-only">Pacific Dust — Premium Streetwear. Drop 01, Autumn Winter 2026. Made in Delhi NCR.</h1>
 
         {/* Kangaroo */}
         <motion.div aria-hidden className="absolute pointer-events-none select-none"

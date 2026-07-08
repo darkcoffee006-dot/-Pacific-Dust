@@ -33,7 +33,7 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-background/85 mt-32">
+    <footer className="bg-ink text-background/85 mt-32" role="contentinfo" aria-label="Site footer">
       <div className="px-6 md:px-10 pt-24 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-12 gap-10 md:gap-12">
 
@@ -48,10 +48,11 @@ export default function Footer() {
               premium French Terry. Considered graphics. Built to last.
               Delivering pan-India.
             </p>
-            <form className="mt-10 max-w-md">
-              <label className="eyebrow text-background/50">Newsletter</label>
+            <form className="mt-10 max-w-md" aria-label="Newsletter signup">
+              <label htmlFor="footer-email" className="eyebrow text-background/50">Newsletter</label>
               <div className="mt-3 flex items-center border-b border-background/20 pb-2">
                 <input
+                  id="footer-email"
                   type="email"
                   placeholder="your@address.com"
                   className="flex-1 bg-transparent outline-none text-sm placeholder:text-background/40 py-2"
@@ -68,7 +69,7 @@ export default function Footer() {
 
           {/* Nav columns — 2 cols each */}
           {cols.map((c) => (
-            <div key={c.title} className="md:col-span-2">
+            <nav key={c.title} className="md:col-span-2" aria-label={c.title}>
               <p className="eyebrow text-background/50">{c.title}</p>
               <ul className="mt-6 space-y-3 text-sm">
                 {c.links.map(([to, label]) => (
@@ -82,7 +83,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
 
           {/* Social — 1 col */}
@@ -117,8 +118,8 @@ export default function Footer() {
         <div className="mt-24 pt-8 border-t border-background/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] tracking-[0.18em] uppercase text-background/50">
           <div>© 2026 Pacific Dust — All rights reserved</div>
           <div className="flex gap-8">
-            <span>Privacy</span>
-            <span>Terms</span>
+            <Link href="/faq" className="hover:text-background/80 transition-colors">Privacy</Link>
+            <Link href="/faq" className="hover:text-background/80 transition-colors">Terms</Link>
             <span>Made in India</span>
           </div>
         </div>

@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { catalog } from "@/data/products";
+
+export const metadata: Metadata = {
+  title: "Collections — Drop 01",
+  description:
+    "Pacific Dust Drop 01. City of Angels, Dreams, Unbothered, and Gradient Soul — four premium oversized tees in black and white.",
+  alternates: { canonical: "https://pacificdust.in/collections" },
+  openGraph: {
+    title: "Pacific Dust — The Drop 01 Collection",
+    description: "Four tees. One drop. City of Angels, Dreams, Unbothered, Gradient Soul.",
+    url: "https://pacificdust.in/collections",
+  },
+};
 
 const chapters = [
   {
