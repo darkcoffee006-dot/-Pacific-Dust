@@ -51,17 +51,9 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  /* ── Permanent redirects (www → apex, http → https handled at CDN) */
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.pacificdust.co.in" }],
-        destination: `${SITE_URL}/:path*`,
-        permanent: true,
-      },
-    ];
-  },
+  /* ── www redirect handled at the hosting/CDN layer ────────
+     Removed from Next.js to prevent ERR_TOO_MANY_REDIRECTS.
+     Set www → apex redirect in your Vercel/host domain settings. */
 };
 
 export default nextConfig;
