@@ -3,16 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Pacific Dust — Premium Indian Streetwear Brand, Delhi NCR",
   description:
-    "Pacific Dust exists for the people who refuse to settle. A premium streetwear brand born in Delhi NCR — 240 GSM French Terry, Drop 01 live now.",
+    "Pacific Dust is a premium Indian streetwear brand founded in Delhi NCR in 2024 by two friends obsessed with quality. 240 GSM French Terry oversized tees — built to last, made with intent.",
   alternates: { canonical: "https://pacificdust.in/about" },
   openGraph: {
-    title: "About Pacific Dust — We're never satisfied.",
+    title: "About Pacific Dust — Premium Indian Streetwear Brand",
     description:
-      "What started as two friends with a vision became an obsession with creating pieces that look premium, feel premium, and live beyond trends.",
+      "Pacific Dust was founded in Delhi NCR in 2024. Premium 240 GSM oversized graphic tees. We refuse to settle.",
     url: "https://pacificdust.in/about",
-    images: [{ url: "/images/pacific/white/DSCN5779.JPG.jpg.jpeg", width: 1200, height: 630, alt: "Pacific Dust story" }],
+    images: [{ url: "/images/pacific/white/DSCN5779.JPG.jpg.jpeg", width: 1200, height: 630, alt: "Pacific Dust — Indian Streetwear Brand, Delhi NCR" }],
   },
 };
 
@@ -56,6 +56,12 @@ export default function About() {
             <em className="italic" style={{ color: "#C9A84C" }}>refuse</em>{" "}
             to settle.
           </h1>
+          {/* Visible brand context — Google reads this to confirm Pacific Dust as a clothing brand */}
+          <p className="mt-8 text-background/60 text-sm max-w-lg leading-relaxed">
+            Pacific Dust is a premium Indian streetwear brand founded in Delhi NCR in 2024.
+            We make 240 GSM French Terry oversized graphic tees — screen print and DTF artwork.
+            Delivering pan-India.
+          </p>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-background/15 pt-12">
             <Stat n="240"    label="GSM Premium French Terry" />
             <Stat n="01"     label="Year of R&D before drop 1" />

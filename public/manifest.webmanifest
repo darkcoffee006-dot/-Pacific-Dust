@@ -1,0 +1,27 @@
+{
+  "name": "Pacific Dust",
+  "short_name": "Pacific Dust",
+  "description": "Pacific Dust — premium Indian streetwear brand. 240 GSM oversized graphic tees. Made in Delhi NCR.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8E2D0",
+  "theme_color": "#1c1917",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/images/kangaro.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "Pacific Dust — Drop 01"
+    }
+  ]
+}

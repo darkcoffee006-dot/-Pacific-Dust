@@ -3,13 +3,14 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "FAQ — Delivery, Returns, Sizing",
+  title: "Pacific Dust FAQ — Orders, Delivery, Returns & Sizing",
   description:
-    "Everything about Pacific Dust — orders, delivery, returns, sizing, alterations. Pan-India delivery. Free on orders above ₹2,000.",
+    "Frequently asked questions about Pacific Dust — how to order, pan-India delivery, free returns within 15 days, sizing guide, and where Pacific Dust tees are made.",
   alternates: { canonical: "https://pacificdust.in/faq" },
   openGraph: {
-    title: "Pacific Dust FAQ — Delivery, Returns, Sizing",
-    description: "Pan-India delivery. Free returns within 15 days. Size guide on every product page.",
+    title: "Pacific Dust FAQ — Orders, Delivery, Returns & Sizing",
+    description:
+      "Everything you need to know about Pacific Dust — ordering via WhatsApp, pan-India delivery, 15-day free returns.",
     url: "https://pacificdust.in/faq",
   },
 };
