@@ -254,6 +254,21 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-ink">
+        {/* Google Analytics GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FE13KE3BT4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FE13KE3BT4', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <Script
           type="module"
           src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
