@@ -89,6 +89,15 @@ export const metadata: Metadata = {
     images: ["/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg"],
   },
   alternates: { canonical: SITE_URL },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+  },
   // Verification placeholders — fill in once submitted to Search Console
   // verification: { google: "YOUR_GOOGLE_VERIFICATION_TOKEN" },
 };
