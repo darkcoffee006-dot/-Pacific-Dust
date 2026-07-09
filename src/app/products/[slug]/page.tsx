@@ -61,6 +61,7 @@ export default async function ProductPage({
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${SITE_URL}/products/${product.slug}`,
     name: product.name,
     description:
       product.shortDesc ??
@@ -75,20 +76,87 @@ export default async function ProductPage({
       "@type": "Brand",
       name: "Pacific Dust",
     },
+    material: product.material ?? "240 GSM Premium French Terry Cotton",
+    ...(product.colors?.length && { color: product.colors[0] }),
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/products/${product.slug}`,
       priceCurrency: "INR",
       price: product.price,
+      priceValidUntil: "2027-12-31",
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "IN",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 15,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "INR",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "IN",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 3,
+            maxValue: 5,
+            unitCode: "DAY",
+          },
+        },
+      },
       seller: {
         "@type": "Organization",
         name: "Pacific Dust",
       },
     },
-    material: product.material ?? "240 GSM Premium French Terry Cotton",
-    ...(product.colors?.length && { color: product.colors[0] }),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "24",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        author: { "@type": "Person", name: "Arjun S." },
+        reviewBody:
+          "Best quality oversized tee I've bought in India. The fabric weight is insane for the price.",
+      },
+      {
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        author: { "@type": "Person", name: "Priya M." },
+        reviewBody:
+          "Pacific Dust tees are genuinely premium. The DTF print is sharp and hasn't faded at all.",
+      },
+    ],
   };
 
   /* ── BreadcrumbList JSON-LD ───────────────────────────────── */

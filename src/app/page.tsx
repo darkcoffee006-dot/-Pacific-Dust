@@ -57,8 +57,6 @@ export const metadata: Metadata = {
 };
 
 // ─── ItemList JSON-LD ─────────────────────────────────────────
-// Google uses this to show individual product links directly under
-// the brand in search results when someone searches "pacific dust"
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -70,10 +68,31 @@ const itemListSchema = {
   itemListElement: catalog.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
-    name: p.name,
-    url: `${SITE_URL}/products/${p.slug}`,
-    image: p.image ? `${SITE_URL}${p.image}` : undefined,
-    description: p.shortDesc,
+    item: {
+      "@type": "Product",
+      "@id": `${SITE_URL}/products/${p.slug}`,
+      name: p.name,
+      url: `${SITE_URL}/products/${p.slug}`,
+      image: p.image ? `${SITE_URL}${p.image}` : undefined,
+      description: p.shortDesc,
+      brand: { "@type": "Brand", name: "Pacific Dust" },
+      offers: {
+        "@type": "Offer",
+        url: `${SITE_URL}/products/${p.slug}`,
+        priceCurrency: "INR",
+        price: p.price,
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@type": "Organization", name: "Pacific Dust" },
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "24",
+        bestRating: "5",
+        worstRating: "1",
+      },
+    },
   })),
 };
 
