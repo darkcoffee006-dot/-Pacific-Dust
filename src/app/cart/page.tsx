@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Minus, Plus, X, Truck, MessageCircle } from "lucide-react";
+import { Minus, Plus, X, Truck } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { useCart } from "@/context/CartContext";
 import ProductCard from "@/components/ui/ProductCard";
 import { newArrivals } from "@/data/products";
@@ -66,7 +67,7 @@ export default function CartPage() {
             </div>
             <button onClick={() => openCheckout(items, true)}
               className="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-sm transition-colors cursor-pointer">
-              <MessageCircle size={14}/> Order via WhatsApp
+              <WhatsAppIcon size={15} /> Order via WhatsApp
             </button>
             <p className="mt-4 text-[11px] text-ink-muted text-center">Pan India Delivery</p>
           </aside>

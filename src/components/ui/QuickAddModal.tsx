@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, Minus, Plus, Check, Ruler, MessageCircle } from "lucide-react";
+import { X, Minus, Plus, Check, Ruler } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import type { Product } from "@/types";
@@ -202,7 +203,7 @@ export default function QuickAddModal({ product, onClose }: Props) {
                     }}
                     className="w-full py-3 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] text-white cursor-pointer"
                   >
-                    <MessageCircle size={13} /> Order via WhatsApp
+                    <WhatsAppIcon size={14} /> Order via WhatsApp
                   </button>
                   <Link href={`/products/${product.slug}`} onClick={onClose}
                     className="text-center text-[10px] tracking-[0.2em] uppercase text-ink-muted hover:text-ink transition-colors pt-1">
@@ -329,7 +330,7 @@ export default function QuickAddModal({ product, onClose }: Props) {
                     }}
                     className="w-full py-3.5 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white transition-colors cursor-pointer"
                   >
-                    <MessageCircle size={13} /> Order via WhatsApp
+                    <WhatsAppIcon size={14} /> Order via WhatsApp
                   </button>
                 </div>
               </div>

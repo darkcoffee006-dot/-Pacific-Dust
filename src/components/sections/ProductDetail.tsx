@@ -4,7 +4,8 @@ import type { Product } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Heart, Minus, Plus, Truck, RotateCcw, Ruler, MessageCircle } from "lucide-react";
+import { Heart, Minus, Plus, Truck, RotateCcw, Ruler } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { useCart } from "@/context/CartContext";
 import { allProducts } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
@@ -219,7 +220,7 @@ export default function ProductDetail({ product }: { product: Product }) {
             onClick={() => openCheckout([{ product, qty, size, color }], false)}
             className="mt-3 hidden md:flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-full transition-colors cursor-pointer"
           >
-            <MessageCircle size={14} /> Order via WhatsApp
+            <WhatsAppIcon size={15} /> Order via WhatsApp
           </button>
 
           <div className="mt-6 flex flex-wrap gap-6 text-xs text-ink-muted">
@@ -264,7 +265,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           className="size-10 rounded-full bg-[#25D366] grid place-items-center flex-shrink-0 cursor-pointer"
           aria-label="Order via WhatsApp"
         >
-          <MessageCircle size={16} color="white" />
+          <WhatsAppIcon size={17} />
         </button>
       </div>
 

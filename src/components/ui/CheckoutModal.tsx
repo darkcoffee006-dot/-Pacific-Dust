@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { X, MessageCircle, Truck, ShoppingBag, ShieldCheck, CreditCard, Landmark } from "lucide-react";
+import { X, Truck, ShoppingBag, ShieldCheck, CreditCard, Landmark } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -271,7 +272,7 @@ export default function CheckoutModal() {
               type="submit"
               className="w-full bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase font-semibold py-4 transition-colors rounded-sm flex items-center justify-center gap-2"
             >
-              <MessageCircle size={15} />
+              <WhatsAppIcon size={17} />
               Confirm & Order via WhatsApp
             </button>
             <div className="flex items-center justify-center gap-1.5 text-[9px] text-ink-muted mt-2">

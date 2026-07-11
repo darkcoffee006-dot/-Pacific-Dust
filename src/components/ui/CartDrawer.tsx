@@ -2,7 +2,8 @@
 
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Minus, Plus, Trash2, ShoppingBag, MessageCircle } from "lucide-react";
+import { X, Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import Image from "next/image";
 
 const WHATSAPP_NUMBER = "919643644455"; // +91 96436 44455
@@ -207,7 +208,7 @@ export default function CartDrawer() {
                   }}
                   className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase font-medium py-4 transition-colors rounded-sm cursor-pointer"
                 >
-                  <MessageCircle size={15} strokeWidth={1.5} />
+                  <WhatsAppIcon size={16} />
                   Order via WhatsApp
                 </button>
 
