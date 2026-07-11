@@ -230,8 +230,7 @@ export default function RootLayout({
           rel="preload"
           as="image"
           href="/images/pacific/black/city of angels/city_of_angels_hanger.jpg"
-          // @ts-expect-error — fetchpriority is valid HTML but not yet in TS types
-          fetchpriority="high"
+          fetchPriority="high"
         />
 
         {/* Local SEO — Delhi NCR geo signals */}

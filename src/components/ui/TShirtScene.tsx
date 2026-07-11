@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import KangarooSilhouette from "./KangarooSilhouette";
 
 declare global {
   namespace JSX {
@@ -182,8 +183,33 @@ export default function TShirtScene({ mouse }: { mouse?: { x: number; y: number 
               pbr.setRoughnessFactor(0.85);
               pbr.setMetallicFactor(0.0);
             });
+            // Dynamically calculate the right chest position based on actual model bounds!
+            const size = (mv as any).getDimensions?.();
+            const center = (mv as any).getBoundingBoxCenter?.();
+            const hotspot = mv.querySelector('[slot="hotspot-chest"]');
+            if (hotspot && size && center) {
+              const x = center.x - (size.x * 0.18); // Right chest
+              const y = center.y + (size.y * 0.25); // Upper chest
+              const z = center.z + (size.z * 0.5) + 0.05; // Exactly at the front surface
+              hotspot.setAttribute('data-position', `${x} ${y} ${z}`);
+              hotspot.setAttribute('data-normal', '0 0 1');
+            }
           }}
-        />
+        >
+          {/* Front Right Chest Logo Hotspot */}
+          <div
+            slot="hotspot-chest"
+            // position is set dynamically on load to ensure it's exact
+            data-normal="0 0 1"
+            style={{
+              width: "48px",
+              height: "48px",
+              pointerEvents: "none",
+            }}
+          >
+            <KangarooSilhouette width="100%" height="100%" opacity={0.9} />
+          </div>
+        </model-viewer>
       </div>
     </div>
   );
