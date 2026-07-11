@@ -6,6 +6,7 @@ import {
   useReducer,
   useCallback,
   useMemo,
+  useState,
   type ReactNode,
 } from "react";
 import type { Product } from "@/types";
@@ -16,6 +17,11 @@ export interface CartItem {
   qty: number;
   size: string;
   color: string;
+}
+
+export interface CheckoutDetails {
+  items: CartItem[];
+  clearCartOnSuccess?: boolean;
 }
 
 interface CartState {
@@ -101,12 +107,16 @@ interface CartContextValue {
   clearCart: () => void;
   openCart: () => void;
   closeCart: () => void;
+  checkoutDetails: CheckoutDetails | null;
+  openCheckout: (items: CartItem[], clearCartOnSuccess?: boolean) => void;
+  closeCheckout: () => void;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, { items: [], open: false });
+  const [checkoutDetails, setCheckoutDetails] = useState<CheckoutDetails | null>(null);
 
   const addItem = useCallback(
     (product: Product, size = "M", color = product.colors[0] ?? "Default") => {
@@ -131,6 +141,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const openCart   = useCallback(() => dispatch({ type: "OPEN" }), []);
   const closeCart  = useCallback(() => dispatch({ type: "CLOSE" }), []);
 
+  const openCheckout = useCallback((items: CartItem[], clearCartOnSuccess = false) => {
+    setCheckoutDetails({ items, clearCartOnSuccess });
+  }, []);
+
+  const closeCheckout = useCallback(() => {
+    setCheckoutDetails(null);
+  }, []);
+
   const totalItems = useMemo(
     () => state.items.reduce((s, i) => s + i.qty, 0),
     [state.items]
@@ -154,6 +172,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
         clearCart,
         openCart,
         closeCart,
+        checkoutDetails,
+        openCheckout,
+        closeCheckout,
       }}
     >
       {children}

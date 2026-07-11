@@ -17,7 +17,7 @@ interface Props {
 }
 
 export default function QuickAddModal({ product, onClose }: Props) {
-  const { addItem, openCart } = useCart();
+  const { addItem, openCart, openCheckout } = useCart();
   const [size,  setSize]  = useState("M");
   const [color, setColor] = useState("");
   const [qty,   setQty]   = useState(1);
@@ -56,12 +56,6 @@ export default function QuickAddModal({ product, onClose }: Props) {
     setAdded(true);
     setTimeout(() => setAdded(false), 1200);
   };
-
-  const wa = product
-    ? `https://wa.me/919643644455?text=${encodeURIComponent(
-        `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Pan India`
-      )}`
-    : "#";
 
   return (
     <AnimatePresence>
@@ -201,10 +195,15 @@ export default function QuickAddModal({ product, onClose }: Props) {
                   >
                     View bag & checkout
                   </button>
-                  <a href={wa} target="_blank" rel="noopener noreferrer"
-                    className="w-full py-3 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] text-white">
+                  <button
+                    onClick={() => {
+                      onClose();
+                      openCheckout([{ product, qty, size, color }], false);
+                    }}
+                    className="w-full py-3 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] text-white cursor-pointer"
+                  >
                     <MessageCircle size={13} /> Order via WhatsApp
-                  </a>
+                  </button>
                   <Link href={`/products/${product.slug}`} onClick={onClose}
                     className="text-center text-[10px] tracking-[0.2em] uppercase text-ink-muted hover:text-ink transition-colors pt-1">
                     View full details →
@@ -323,10 +322,15 @@ export default function QuickAddModal({ product, onClose }: Props) {
                   >
                     View bag & checkout
                   </button>
-                  <a href={wa} target="_blank" rel="noopener noreferrer"
-                    className="w-full py-3.5 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white transition-colors">
+                  <button
+                    onClick={() => {
+                      onClose();
+                      openCheckout([{ product, qty, size, color }], false);
+                    }}
+                    className="w-full py-3.5 text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white transition-colors cursor-pointer"
+                  >
                     <MessageCircle size={13} /> Order via WhatsApp
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

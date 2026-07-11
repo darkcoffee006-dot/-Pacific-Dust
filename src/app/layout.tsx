@@ -10,6 +10,7 @@ import { CartProvider } from "@/context/CartContext";
 import { QuickAddProvider } from "@/context/QuickAddContext";
 import CartDrawer from "@/components/ui/CartDrawer";
 import QuickAddModalRoot from "@/components/ui/QuickAddModalRoot";
+import CheckoutModal from "@/components/ui/CheckoutModal";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -284,6 +285,7 @@ export default function RootLayout({
             <Footer />
             <CartDrawer />
             <QuickAddModalRoot />
+            <CheckoutModal />
           </QuickAddProvider>
         </CartProvider>
       </body>

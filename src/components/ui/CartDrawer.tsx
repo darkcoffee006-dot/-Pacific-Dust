@@ -33,7 +33,7 @@ function buildWhatsAppURL(items: ReturnType<typeof useCart>["items"], total: num
 
 /* ── Cart Drawer ────────────────────────────────────────────── */
 export default function CartDrawer() {
-  const { items, open, totalItems, totalPrice, removeItem, setQty, clearCart, closeCart } =
+  const { items, open, totalItems, totalPrice, removeItem, setQty, clearCart, closeCart, openCheckout } =
     useCart();
 
   return (
@@ -200,16 +200,16 @@ export default function CartDrawer() {
                 </p>
 
                 {/* WhatsApp Buy Now */}
-                <a
-                  href={buildWhatsAppURL(items, totalPrice)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase font-medium py-4 transition-colors rounded-sm"
-                  onClick={clearCart}
+                <button
+                  onClick={() => {
+                    closeCart();
+                    openCheckout(items, true);
+                  }}
+                  className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase font-medium py-4 transition-colors rounded-sm cursor-pointer"
                 >
                   <MessageCircle size={15} strokeWidth={1.5} />
                   Order via WhatsApp
-                </a>
+                </button>
 
                 {/* Clear cart */}
                 <button

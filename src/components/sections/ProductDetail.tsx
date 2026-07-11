@@ -13,7 +13,7 @@ import SizeGuideModal from "@/components/ui/SizeGuideModal";
 const DEFAULT_SIZES = ["S", "M", "L", "XL"];
 
 export default function ProductDetail({ product }: { product: Product }) {
-  const { addItem, openCart } = useCart();
+  const { addItem, openCart, openCheckout } = useCart();
   const sizes = product.sizes ?? DEFAULT_SIZES;
   const [size, setSize] = useState(sizes.includes("M") ? "M" : sizes[0]);
   const [color, setColor] = useState(product.colors[0]);
@@ -26,10 +26,6 @@ export default function ProductDetail({ product }: { product: Product }) {
     setAdded(true);
     setTimeout(() => setAdded(false), 2500);
   };
-
-  const wa = `https://wa.me/919643644455?text=${encodeURIComponent(
-    `Hi Pacific Dust! I'd like to order:\n\n• ${product.name} (${color}, Size: ${size}) × ${qty}\n\nPrice: ₹${(product.price * qty).toLocaleString("en-IN")}\n\nDelivery: Pan India`
-  )}`;
 
   const gallery = product.images?.length
     ? product.images
@@ -76,7 +72,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     ],
     [
       "Delivery & returns",
-      "Pan-India delivery — 3–5 working days. Free on orders above ₹2,000.\n15-day returns on unworn pieces. We collect from your door.",
+      "Pan-India delivery — 3–5 working days. Free on orders above ₹1,000.\n15-day returns on unworn pieces. We collect from your door.",
     ],
   ];
 
@@ -219,17 +215,15 @@ export default function ProductDetail({ product }: { product: Product }) {
             </button>
           )}
 
-          <a
-            href={wa}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 hidden md:flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-full transition-colors"
+          <button
+            onClick={() => openCheckout([{ product, qty, size, color }], false)}
+            className="mt-3 hidden md:flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-full transition-colors cursor-pointer"
           >
             <MessageCircle size={14} /> Order via WhatsApp
-          </a>
+          </button>
 
           <div className="mt-6 flex flex-wrap gap-6 text-xs text-ink-muted">
-          <span className="flex items-center gap-2"><Truck size={14} /> Free delivery above ₹2,000</span>
+          <span className="flex items-center gap-2"><Truck size={14} /> Free delivery above ₹1,000</span>
             <span className="flex items-center gap-2"><RotateCcw size={14} /> 15-day returns</span>
           </div>
 
@@ -265,15 +259,13 @@ export default function ProductDetail({ product }: { product: Product }) {
         >
           {added ? "Added ✓" : "Add to bag"}
         </button>
-        <a
-          href={wa}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="size-10 rounded-full bg-[#25D366] grid place-items-center flex-shrink-0"
+        <button
+          onClick={() => openCheckout([{ product, qty, size, color }], false)}
+          className="size-10 rounded-full bg-[#25D366] grid place-items-center flex-shrink-0 cursor-pointer"
           aria-label="Order via WhatsApp"
         >
           <MessageCircle size={16} color="white" />
-        </a>
+        </button>
       </div>
 
       {related.length > 0 && (

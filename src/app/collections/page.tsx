@@ -6,7 +6,7 @@ import { catalog } from "@/data/products";
 export const metadata: Metadata = {
   title: "Buy Oversized Graphic Tees Online India — Drop 01 Collection",
   description:
-    "Buy Pacific Dust Drop 01 oversized graphic tees online — City of Angels, Dreams, Unbothered & Gradient Soul. 240 GSM French Terry. Sizes S–XL. Pan-India delivery. Free shipping above Rs. 2000.",
+    "Buy Pacific Dust Drop 01 oversized graphic tees online — City of Angels, Dreams, Unbothered & Gradient Soul. 240 GSM French Terry. Sizes S–XL. Pan-India delivery. Free shipping above Rs. 1000.",
   alternates: { canonical: "https://pacificdust.co.in/collections" },
   openGraph: {
     title: "Pacific Dust Drop 01 — Buy Oversized Graphic Tees Online India",

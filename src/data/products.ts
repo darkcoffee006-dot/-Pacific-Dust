@@ -57,7 +57,7 @@ export const catalog: Product[] = [
       black("city of angels", "DSCN5593.JPG"),
     ],
     tags: ["graphic", "streetwear", "jersey", "varsity", "oversized"],
-    shortDesc: "Buy City of Angels Tee — 240 GSM oversized black graphic tee. Vintage jersey-inspired screen print. Sizes S–XL. Free delivery above Rs. 2000.",
+    shortDesc: "Buy City of Angels Tee — 240 GSM oversized black graphic tee. Vintage jersey-inspired screen print. Sizes S–XL. Free delivery above Rs. 1000.",
     description:
       "The City of Angels Tee draws inspiration from vintage athletic jerseys, reimagined through a contemporary streetwear lens. Crafted from heavyweight 240 GSM premium French Terry cotton, it delivers exceptional breathability, a soft hand feel, and lasting comfort while maintaining a structured silhouette. The oversized box fit, premium ribbed crew collar, and layered front graphics paired with the bold jersey-style 07 back print create a piece that blends timeless sportswear aesthetics with elevated everyday wear. Designed to hold its shape, resist fading, and stand apart season after season.",
     features: [

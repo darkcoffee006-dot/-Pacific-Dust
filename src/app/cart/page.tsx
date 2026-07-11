@@ -7,13 +7,9 @@ import ProductCard from "@/components/ui/ProductCard";
 import { newArrivals } from "@/data/products";
 
 export default function CartPage() {
-  const { items, totalPrice, totalItems, setQty, removeItem, clearCart } = useCart();
-  const shipping = totalPrice > 2000 ? 0 : 99;
-  const progress = Math.min(100, (totalPrice / 2000) * 100);
-
-  const wa = items.length ? `https://wa.me/919643644455?text=${encodeURIComponent(
-    `Hello Pacific Dust! 🛍️\n\nI'd like to place an order:\n\n${items.map(i=>`• ${i.product.name} (${i.color}, Size: ${i.size}) × ${i.qty} — ₹${(i.product.price*i.qty).toLocaleString("en-IN")}`).join("\n")}\n\n*Total: ₹${totalPrice.toLocaleString("en-IN")}*\n\nDelivery: Pan India`
-  )}` : "#";
+  const { items, totalPrice, totalItems, setQty, removeItem, clearCart, openCheckout } = useCart();
+  const shipping = totalPrice > 1000 ? 0 : 99;
+  const progress = Math.min(100, (totalPrice / 1000) * 100);
 
   return (
     <main className="pt-32 px-6 md:px-10 min-h-screen">
@@ -56,7 +52,7 @@ export default function CartPage() {
           <aside className="lg:sticky lg:top-32 lg:self-start bg-surface p-8 rounded-sm shadow-soft">
             <p className="eyebrow">Summary</p>
             <div className="mt-6">
-              <p className="text-xs flex items-center gap-2 text-ink-muted"><Truck size={14}/> {shipping===0?"Free delivery unlocked":`₹${2000-totalPrice} more for free delivery`}</p>
+              <p className="text-xs flex items-center gap-2 text-ink-muted"><Truck size={14}/> {shipping===0?"Free delivery unlocked":`₹${1000-totalPrice} more for free delivery`}</p>
               <div className="mt-3 h-px bg-line relative overflow-hidden">
                 <div className="absolute inset-y-0 left-0 bg-ink transition-all" style={{width:`${progress}%`}}/>
               </div>
@@ -68,10 +64,10 @@ export default function CartPage() {
             <div className="mt-6 pt-6 border-t border-line flex justify-between font-display text-2xl">
               <span>Total</span><span>₹{(totalPrice+shipping).toLocaleString("en-IN")}</span>
             </div>
-            <a href={wa} target="_blank" rel="noopener noreferrer" onClick={clearCart}
-              className="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-sm transition-colors">
+            <button onClick={() => openCheckout(items, true)}
+              className="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] hover:bg-[#20b858] text-white text-[11px] tracking-[0.2em] uppercase rounded-sm transition-colors cursor-pointer">
               <MessageCircle size={14}/> Order via WhatsApp
-            </a>
+            </button>
             <p className="mt-4 text-[11px] text-ink-muted text-center">Pan India Delivery</p>
           </aside>
         </div>

@@ -26,7 +26,7 @@ export async function generateMetadata({
   const imageUrl = product.image ?? "/images/pacific/black/city of angels/DSCN5554.JPG.jpg.jpeg";
   const title = `Buy ${product.name} Online — ${product.fit ?? "Oversized Tee"} | Pacific Dust`;
   const description = product.shortDesc ??
-    `Buy ${product.name} by Pacific Dust. ${product.material ?? "240 GSM French Terry"}. ${product.fit ?? "Oversized box fit"}. Sizes S, M, L, XL. Pan-India delivery. Free shipping above Rs. 2000.`;
+    `Buy ${product.name} by Pacific Dust. ${product.material ?? "240 GSM French Terry"}. ${product.fit ?? "Oversized box fit"}. Sizes S, M, L, XL. Pan-India delivery. Free shipping above Rs. 1000.`;
 
   return {
     title,

@@ -42,7 +42,7 @@ export default function Checkout() {
           </section>
           <section className="mt-16"><h2 className="eyebrow">Delivery method</h2>
             <div className="mt-6 divide-y divide-line border-y border-line">
-              {[["Standard","3–5 working days","Free (orders above ₹2000)"],["Express","1–2 working days","₹99"],["Same-day (Delhi NCR)","Before 7pm","₹149"]].map(([m,d,p],i) => (
+              {[["Standard","3–5 working days","Free (orders above ₹1000)"],["Express","1–2 working days","₹99"],["Same-day (Delhi NCR)","Before 7pm","₹149"]].map(([m,d,p],i) => (
                 <label key={m} className="flex items-center justify-between py-5 cursor-pointer">
                   <span className="flex items-center gap-4">
                     <span className={`size-4 rounded-full border ${i===0?"border-ink bg-ink ring-4 ring-background ring-offset-1 ring-offset-ink":"border-line"}`}/>

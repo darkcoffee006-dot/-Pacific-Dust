@@ -12,7 +12,7 @@ const CATEGORY_META: Record<string, { title: string; heading: string; descriptio
     title: "Buy Oversized T-Shirts Online India — 240 GSM Graphic Tees",
     heading: "Oversized T-Shirts",
     description:
-      "Buy premium 240 GSM oversized graphic T-shirts online in India. Pacific Dust Drop 01 — City of Angels, Dreams, Unbothered & Gradient Soul. Oversized box fit, screen print & DTF artwork. Pan-India delivery. Free shipping above Rs. 2000.",
+      "Buy premium 240 GSM oversized graphic T-shirts online in India. Pacific Dust Drop 01 — City of Angels, Dreams, Unbothered & Gradient Soul. Oversized box fit, screen print & DTF artwork. Pan-India delivery. Free shipping above Rs. 1000.",
   },
   outerwear: {
     title: "Outerwear — Pacific Dust",
@@ -165,7 +165,7 @@ export default async function CategoryPage({
         <p className="mt-4 text-sm text-ink-muted leading-relaxed">
           Drop 01 includes four tees — City of Angels (black, screen print), Unbothered (black, DTF),
           Dreams (white, screen print), and Gradient Soul (white, screen print). Sizes S, M, L, XL.
-          Free delivery on orders above Rs. 2,000.
+          Free delivery on orders above Rs. 1,000.
         </p>
       </section>
     </main>

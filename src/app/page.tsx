@@ -21,7 +21,7 @@ const SITE_URL = "https://pacificdust.co.in";
 export const metadata: Metadata = {
   title: "Pacific Dust | Premium Oversized T-Shirts Online India — Drop 01",
   description:
-    "Pacific Dust is an Indian streetwear brand making 240 GSM premium oversized graphic tees. City of Angels, Dreams, Unbothered & Gradient Soul. Made in Delhi NCR. Free delivery above Rs. 2000.",
+    "Pacific Dust is an Indian streetwear brand making 240 GSM premium oversized graphic tees. City of Angels, Dreams, Unbothered & Gradient Soul. Made in Delhi NCR. Free delivery above Rs. 1000.",
   keywords: [
     "pacific dust",
     "pacific dust clothing india",

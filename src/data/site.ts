@@ -5,7 +5,7 @@ export const announcementItems = [
   "Now delivering Pan India — Order from anywhere",
   "Drop 01 — Autumn / Winter 26 · Live now",
   "Proudly made in India — 240 GSM French Terry",
-  "Free delivery on orders above ₹2,000 across Delhi NCR",
+  "Free delivery on orders above ₹1,000 across Delhi NCR",
   "Free returns within 15 days — No questions asked",
   "Order via WhatsApp · +91 96436 44455",
 ];
